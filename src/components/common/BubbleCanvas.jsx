@@ -23,9 +23,12 @@ export default function BubbleCanvas() {
     // Shuffle the palette so colors are distributed randomly on every session
     const shuffledColors = [...COLOR_PALETTE].sort(() => Math.random() - 0.5);
 
-    const positions = [5, 12, 20, 28, 36, 44, 52, 60, 68, 76, 84, 91, 48, 80];
-    const sizes = [18, 30, 16, 26, 34, 20, 28, 15, 32, 22, 17, 27, 24, 19];
-    const durations = [13, 17, 12, 15, 19, 14, 16, 11, 18, 13.5, 16.5, 12.5, 15.5, 14.5];
+    // Only place bubbles on the outer flanks (left margin <= 13%, right margin >= 87%)
+    // The entire center (14% - 86%) is kept completely clear of bubbles
+    const positions = [2, 4.5, 7, 9.5, 12, 13.5, 3.5, 86.5, 88.5, 91, 93.5, 95.5, 97.5, 87];
+    // Sleek, small delicate particle sizes (8px - 14px)
+    const sizes = [9, 12, 8, 13, 10, 14, 9, 11, 13, 8, 12, 10, 14, 9];
+    const durations = [13, 17, 12, 15, 18, 14, 16, 12.5, 17.5, 13.5, 16.5, 14.5, 15.5, 13];
     const delays = [0, 3.2, 1.4, 4.8, 2.1, 5.5, 0.8, 6.2, 3.8, 1.9, 5.0, 2.7, 4.1, 6.8];
 
     return positions.map((pos, i) => {
@@ -53,9 +56,9 @@ export default function BubbleCanvas() {
             left: `${b.left}%`,
             animationDuration: `${b.duration}s`,
             animationDelay: `${b.delay}s`,
-            background: `radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.8) 0%, rgba(${b.rgb}, 0.52) 35%, rgba(${b.rgb}, 0.22) 65%, rgba(${b.rgb}, 0.08) 100%)`,
+            background: `radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.85) 0%, rgba(${b.rgb}, 0.55) 38%, rgba(${b.rgb}, 0.2) 72%, rgba(${b.rgb}, 0.05) 100%)`,
             border: `1px solid rgba(${b.rgb}, 0.45)`,
-            boxShadow: `inset 0 0 10px rgba(255, 255, 255, 0.55), inset -2px -2px 8px rgba(${b.rgb}, 0.5), 0 0 16px rgba(${b.rgb}, 0.38)`,
+            boxShadow: `inset 0 0 4px rgba(255, 255, 255, 0.6), 0 0 8px rgba(${b.rgb}, 0.35)`,
           }}
         />
       ))}
