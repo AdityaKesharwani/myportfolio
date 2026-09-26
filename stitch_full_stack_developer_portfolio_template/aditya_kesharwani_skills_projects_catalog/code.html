@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#f2f4f6", "on-surface-variant": "#46464b", "on-tertiary-fixed": "#0b1c30", "primary-container": "#1a1b21", "surface-container": "#eceef0", "tertiary-fixed": "#d3e4fe", "on-secondary-fixed": "#0d1c2f", "secondary": "#515f74", "on-primary-fixed": "#1a1b21", "on-tertiary-container": "#75859d", "on-primary": "#ffffff", "surface-tint": "#5e5e64", "tertiary-fixed-dim": "#b7c8e1", "tertiary": "#000000", "primary-fixed-dim": "#c7c6cd", "secondary-fixed": "#d5e3fd", "on-secondary-fixed-variant": "#3a485c", "surface-container-high": "#e6e8ea", "tertiary-container": "#0b1c30", "outline": "#77767b", "surface-container-highest": "#e0e3e5", "primary": "#000000", "background": "#f7f9fb", "outline-variant": "#c7c6cb", "on-surface": "#191c1e", "inverse-primary": "#c7c6cd", "secondary-fixed-dim": "#b9c7e0", "secondary-container": "#d5e3fd", "on-primary-container": "#83838a", "inverse-surface": "#2d3133", "inverse-on-surface": "#eff1f3", "on-error-container": "#93000a", "primary-fixed": "#e3e1e9", "surface-dim": "#d8dadc", "on-secondary": "#ffffff", "on-error": "#ffffff", "on-primary-fixed-variant": "#46464c", "surface-variant": "#e0e3e5", "on-secondary-container": "#57657b", "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#38485d", "surface-container-lowest": "#ffffff", "on-background": "#191c1e", "surface-bright": "#f7f9fb", "error": "#ba1a1a", "surface": "#f7f9fb", "on-tertiary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-xs": "0.25rem", "margin-desktop": "4rem", "gutter": "1.5rem", "space-md": "1rem", "margin": "1.25rem", "margin-tablet": "2.5rem", "gutter-desktop": "2rem", "space-xl": "2.5rem", "space-2xl": "4rem", "space-sm": "0.5rem" }, "fontFamily": { "display-xl": [ "Space Grotesk" ], "headline-md": [ "Space Grotesk" ], "body-lg": [ "Inter" ], "label-mono-md": [ "JetBrains Mono" ], "body-sm": [ "Inter" ], "stat-counter": [ "Space Grotesk" ], "headline-lg-mobile": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "display-xl-mobile": [ "Space Grotesk" ], "body-md": [ "Inter" ], "headline-sm": [ "Space Grotesk" ], "label-mono-sm": [ "JetBrains Mono" ] }, "fontSize": { "display-xl": [ "4rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.04em", "fontWeight": "600" } ], "headline-md": [ "1.5rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "body-lg": [ "1.125rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-mono-md": [ "0.8125rem", { "lineHeight": "1rem", "letterSpacing": "0.04em", "fontWeight": "500" } ], "body-sm": [ "0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "0em", "fontWeight": "400" } ], "stat-counter": [ "3.5rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.04em", "fontWeight": "400" } ], "headline-lg-mobile": [ "1.75rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "headline-lg": [ "2.5rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.03em", "fontWeight": "500" } ], "display-xl-mobile": [ "2.5rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "body-md": [ "0.9375rem", { "lineHeight": "1.5rem", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-mono-sm": [ "0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.06em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex flex-col group" data-path="overview" href="#"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-primary">Aditya Kesharwani</span><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant font-medium">/ DEV</span></div><div class="flex items-center gap-space-sm mt-0.5"><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Full Stack Developer</span><span class="hidden xl:inline-flex items-center gap-1 font-label-mono-sm text-label-mono-sm text-primary bg-surface-container-high px-space-xs py-0.5"><span>●</span> Available ($12–$25/hr)</span></div></a></div><nav class="hidden lg:flex items-center bg-surface-container-low p-1" data-active-classes="bg-primary text-on-primary font-medium"><a class="font-label-mono-md text-label-mono-md uppercase px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="#">Overview</a><a class="font-label-mono-md text-label-mono-md uppercase px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">About</a><a class="font-label-mono-md text-label-mono-md uppercase px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="experience" href="#">Experience</a><a aria-current="page" class="uppercase px-space-md py-space-xs transition-colors bg-primary text-on-primary font-medium" data-path="projects" href="#">Projects</a><a class="font-label-mono-md text-label-mono-md uppercase px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="skills" href="#">Skills</a><a class="font-label-mono-md text-label-mono-md uppercase px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="hire-me" href="#">Hire Me</a><a class="font-label-mono-md text-label-mono-md uppercase px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:flex items-center justify-center w-9 h-9 bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface" href="mailto:akesharwani.info@gmail.com" title="Copy email address"><span class="material-symbols-outlined text-[18px]">mail</span></a><a class="font-label-mono-md text-label-mono-md uppercase bg-primary text-on-primary hover:bg-secondary transition-colors px-space-md py-2 flex items-center gap-space-xs" data-path="hire-me" href="#"><span>Hire Me</span><span class="material-symbols-outlined text-[16px]">north_east</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
+<!-- SECTION 01: HERO / LEDGER DIRECTORY -->
+<section class="w-full bg-surface-container-low px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl md:py-space-2xl">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 bg-primary"></span>
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant tracking-widest">Architectural Registry // Vol. 04</span>
+</div>
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-primary tracking-tighter uppercase leading-none">
+            Technical Index &amp; Selected Work
+          </h1>
+</div>
+<div class="flex items-center gap-space-md font-label-mono-md text-label-mono-md text-on-surface-variant">
+<span class="bg-surface-container px-space-md py-space-xs font-medium text-primary">STATUS: OPERATIONAL</span>
+<span class="hidden sm:inline">UPDATED: Q1 // 2026</span>
+</div>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+        Systematic inventory of core competencies, microservice architectures, enterprise-scale backends, and full-stack software deployments authored by Aditya Kesharwani.
+      </p>
+<!-- Quick Metrics Ribbon -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-space-sm pt-space-md">
+<div class="bg-surface-container-lowest p-space-md flex flex-col justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Payroll Variance</span>
+<div class="flex items-baseline gap-space-xs mt-space-sm">
+<span class="font-stat-counter text-stat-counter text-primary leading-none">-40%</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Error Rate</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-space-xs">White Force Automation</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md flex flex-col justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Runtime Overhead</span>
+<div class="flex items-baseline gap-space-xs mt-space-sm">
+<span class="font-stat-counter text-stat-counter text-primary leading-none">+30%</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Throughput</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-space-xs">Query Index Optimization</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md flex flex-col justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Sync Pipeline</span>
+<div class="flex items-baseline gap-space-xs mt-space-sm">
+<span class="font-stat-counter text-stat-counter text-primary leading-none">16+</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Portals</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-space-xs">Unified HRMS Ingestion</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md flex flex-col justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Incident Reduction</span>
+<div class="flex items-baseline gap-space-xs mt-space-sm">
+<span class="font-stat-counter text-stat-counter text-primary leading-none">-30%</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Defects</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-space-xs">Production Rollouts</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 02: SKILLS & EXPERTISE MATRIX -->
+<section class="w-full bg-surface px-margin md:px-margin-tablet lg:px-margin-desktop py-space-2xl">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div class="space-y-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase tracking-widest block">01 // Architectural Grid</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight uppercase">
+            Technologies I Work With
+          </h2>
+</div>
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs">
+<span class="w-2 h-2 bg-primary"></span>
+<span>COMPETENCY INDEX: 7 DOMAINS / 58 STACK UNITS</span>
+</div>
+</div>
+<!-- Seven Domains Bento/Matrix -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Domain 01: Backend & Frameworks (Spans 2 cols on lg) -->
+<div class="lg:col-span-2 bg-surface-container-lowest p-space-xl flex flex-col justify-between space-y-space-lg shadow-sm">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant tracking-wider">DOMAIN_01 // CORE ARCHITECTURE</span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-medium bg-surface-container px-space-xs py-0.5">PRIMARY DISCIPLINE</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary tracking-tight">Backend &amp; Frameworks</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Engineered with clean architectural patterns including Domain-Driven and HMVC structure. Specialization in PHP 8.x, enterprise Laravel lifecycle orchestration, Eloquent relational mapping, and deterministic unit testing suites.
+            </p>
+</div>
+<div class="flex flex-wrap gap-space-xs">
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">PHP 8.x</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Laravel 8</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Laravel 9</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Laravel 10</span>
+<span class="bg-primary text-on-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Laravel 11</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">MVC Architecture</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">HMVC Architecture</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Eloquent ORM</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">PHPUnit</span>
+</div>
+</div>
+<!-- Domain 02: Frontend Systems -->
+<div class="bg-surface-container-lowest p-space-xl flex flex-col justify-between space-y-space-lg shadow-sm">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant tracking-wider">DOMAIN_02 // CLIENT LAYER</span>
+<span class="material-symbols-outlined text-primary text-[20px]">layers</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary tracking-tight">Frontend</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              High-frequency, responsive interface logic with reusable component graphs, strict type contracts, and zero-jank DOM rendering.
+            </p>
+</div>
+<div class="flex flex-wrap gap-space-xs">
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">HTML5</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">CSS3</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">JavaScript ES6+</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">TypeScript</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">React.js</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">jQuery</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">AJAX</span>
+</div>
+</div>
+<!-- Domain 03: Database & Performance -->
+<div class="bg-surface-container-lowest p-space-xl flex flex-col justify-between space-y-space-lg shadow-sm">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant tracking-wider">DOMAIN_03 // PERSISTENCE</span>
+<span class="material-symbols-outlined text-primary text-[20px]">database</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary tracking-tight">Database &amp; Performance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Relational schemas tuned for heavy transaction volumes. Profiling slow queries, strategic B-tree indexing, and in-memory cache strata.
+            </p>
+</div>
+<div class="flex flex-wrap gap-space-xs">
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">MySQL</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">SQL Queries</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Complex Joins</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Indexing</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Stored Procedures</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Triggers</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Query Optimization</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Caching</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Redis</span>
+</div>
+</div>
+<!-- Domain 04: APIs & Integrations (Spans 2 cols on lg) -->
+<div class="lg:col-span-2 bg-surface-container-lowest p-space-xl flex flex-col justify-between space-y-space-lg shadow-sm">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant tracking-wider">DOMAIN_04 // CONNECTIVITY</span>
+<span class="material-symbols-outlined text-primary text-[20px]">hub</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary tracking-tight">APIs &amp; Integrations</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Extensible REST gateways, third-party vendor synchronization, transactional payment orchestration, and automated LLM agent integration pipelines.
+            </p>
+</div>
+<div class="flex flex-wrap gap-space-xs">
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">RESTful APIs</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Razorpay</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">PayU</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">SMS APIs</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Email APIs</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Google Maps API</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Google Authenticator</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Third-Party APIs</span>
+<span class="bg-primary text-on-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">AI Integration</span>
+<span class="bg-primary text-on-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">AI Automation</span>
+</div>
+</div>
+<!-- Domain 05: Authentication & Security -->
+<div class="bg-surface-container-lowest p-space-xl flex flex-col justify-between space-y-space-lg shadow-sm">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant tracking-wider">DOMAIN_05 // HARDENING</span>
+<span class="material-symbols-outlined text-primary text-[20px]">shield</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary tracking-tight">Authentication &amp; Security</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Zero-trust identity validation, cryptographic session handling, and proactive vulnerability mitigation against automated penetration.
+            </p>
+</div>
+<div class="flex flex-wrap gap-space-xs">
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Authentication</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Authorization</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">CSRF Protection</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">XSS Prevention</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Input Validation</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Session Management</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Two-Factor Auth</span>
+</div>
+</div>
+<!-- Domain 06: E-Commerce Systems -->
+<div class="bg-surface-container-lowest p-space-xl flex flex-col justify-between space-y-space-lg shadow-sm">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant tracking-wider">DOMAIN_06 // COMMERCE</span>
+<span class="material-symbols-outlined text-primary text-[20px]">shopping_cart</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary tracking-tight">E-Commerce Architecture</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              High-concurrency checkout pipelines, multi-tenant merchant routing, strict inventory locks, and rule-based discounting systems.
+            </p>
+</div>
+<div class="flex flex-wrap gap-space-xs">
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Shopping Cart</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Checkout Systems</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Product Catalog</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Inventory Management</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Order Lifecycle</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Coupon Engines</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Multi-vendor Architecture</span>
+</div>
+</div>
+<!-- Domain 07: Cloud & Deployment -->
+<div class="bg-surface-container-lowest p-space-xl flex flex-col justify-between space-y-space-lg shadow-sm">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant tracking-wider">DOMAIN_07 // DEVOPS</span>
+<span class="material-symbols-outlined text-primary text-[20px]">cloud_sync</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary tracking-tight">Cloud &amp; Deployment</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Predictable delivery pipelines, isolated environments, automated scheduled cron daemons, and cloud infrastructure provisioning.
+            </p>
+</div>
+<div class="flex flex-wrap gap-space-xs">
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Git</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">GitHub</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Bitbucket</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">AWS EC2</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">AWS S3</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">CI/CD Pipelines</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Azure DevOps</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Cron Jobs</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">Agile / Scrum</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 03: ARCHITECTURAL PERFORMANCE BENCHMARKS (DATA VISUALIZATION) -->
+<section class="w-full bg-surface-container-low px-margin md:px-margin-tablet lg:px-margin-desktop py-space-2xl">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="space-y-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase tracking-widest block">02 // Quantitative Impact</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight uppercase">
+            Engineering Telemetry
+          </h2>
+</div>
+<p class="font-label-mono-sm text-label-mono-sm text-on-surface-variant max-w-md">
+          Measured optimizations observed across production client deployments following refactoring, index restructuring, and automated validation gates.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- SVG Metric Card 1 -->
+<div class="bg-surface-container-lowest p-space-xl flex flex-col justify-between shadow-sm">
+<div class="space-y-space-sm">
+<div class="flex justify-between items-center text-on-surface-variant font-label-mono-sm text-label-mono-sm">
+<span>METRIC // PR_01</span>
+<span>PAYROLL ACCURACY</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Payroll Calculation Variance</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">White Force HRMS automation eliminated edge-case manual deductions through transactional tax calculation workers.</p>
+</div>
+<div class="py-space-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-stat-counter text-stat-counter text-primary leading-none">-40%</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-1">Manual Intervention Rate</span>
+</div>
+<!-- Progress Arc / Ring SVG -->
+<svg class="w-20 h-20 text-primary" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="40, 100" stroke-linecap="butt" stroke-width="3"></path>
+</svg>
+</div>
+<div class="pt-space-sm font-label-mono-sm text-label-mono-sm text-on-surface-variant bg-surface-container-low p-space-sm">
+            STATUS: Verified across 1,200+ employee records
+          </div>
+</div>
+<!-- SVG Metric Card 2 -->
+<div class="bg-surface-container-lowest p-space-xl flex flex-col justify-between shadow-sm">
+<div class="space-y-space-sm">
+<div class="flex justify-between items-center text-on-surface-variant font-label-mono-sm text-label-mono-sm">
+<span>METRIC // DB_02</span>
+<span>QUERY LATENCY</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Database Query Throughput</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Strategic index trees on high-cardinality candidate catalogs, coupled with Redis key caching on repeat queries.</p>
+</div>
+<div class="py-space-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-stat-counter text-stat-counter text-primary leading-none">25-30%</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-1">Response Time Reduction</span>
+</div>
+<!-- Bar Chart Sparkline SVG -->
+<svg class="w-24 h-16 text-primary" viewbox="0 0 100 60">
+<rect fill="currentColor" height="25" opacity="0.2" width="14" x="5" y="35"></rect>
+<rect fill="currentColor" height="15" opacity="0.3" width="14" x="25" y="45"></rect>
+<rect fill="currentColor" height="35" opacity="0.5" width="14" x="45" y="25"></rect>
+<rect fill="currentColor" height="45" opacity="0.75" width="14" x="65" y="15"></rect>
+<rect fill="currentColor" height="55" width="14" x="85" y="5"></rect>
+</svg>
+</div>
+<div class="pt-space-sm font-label-mono-sm text-label-mono-sm text-on-surface-variant bg-surface-container-low p-space-sm">
+            BENCHMARK: p99 latency dropped from 480ms to 320ms
+          </div>
+</div>
+<!-- SVG Metric Card 3 -->
+<div class="bg-surface-container-lowest p-space-xl flex flex-col justify-between shadow-sm">
+<div class="space-y-space-sm">
+<div class="flex justify-between items-center text-on-surface-variant font-label-mono-sm text-label-mono-sm">
+<span>METRIC // REL_03</span>
+<span>DEFECT RATE</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Production Issue Mitigation</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Automated linting, input sanitation guards, and CI/CD pre-merge staging validations.</p>
+</div>
+<div class="py-space-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-stat-counter text-stat-counter text-primary leading-none">-30%</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-1">Post-Release Incidents</span>
+</div>
+<!-- Sync Pipeline Graph SVG -->
+<svg class="w-20 h-20 text-primary" viewbox="0 0 40 40">
+<circle cx="20" cy="20" fill="none" r="16" stroke="currentColor" stroke-dasharray="4,4" stroke-width="2"></circle>
+<circle cx="20" cy="20" fill="currentColor" r="8"></circle>
+<line stroke="currentColor" stroke-width="2" x1="20" x2="20" y1="4" y2="12"></line>
+<line stroke="currentColor" stroke-width="2" x1="20" x2="20" y1="28" y2="36"></line>
+<line stroke="currentColor" stroke-width="2" x1="4" x2="12" y1="20" y2="20"></line>
+<line stroke="currentColor" stroke-width="2" x1="28" x2="36" y1="20" y2="20"></line>
+</svg>
+</div>
+<div class="pt-space-sm font-label-mono-sm text-label-mono-sm text-on-surface-variant bg-surface-container-low p-space-sm">
+            ECOSYSTEM: 16+ Job Portals Integrated &amp; Monitored
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 04: PROJECTS IN-DEPTH CATALOGUE -->
+<section class="w-full bg-surface px-margin md:px-margin-tablet lg:px-margin-desktop py-space-2xl">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-space-2xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="space-y-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase tracking-widest block">03 // Dossier</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight uppercase">
+            Selected Work.
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+          A collection of web applications, enterprise platforms and backend integrations I have worked on throughout my development career.
+        </p>
+</div>
+<!-- Projects Stack List -->
+<div class="flex flex-col gap-space-xl">
+<!-- PROJECT 01: THE OBAN WHISKEY -->
+<article class="bg-surface-container-lowest p-space-lg md:p-space-xl shadow-sm flex flex-col lg:flex-row gap-space-xl items-stretch">
+<div class="w-full lg:w-1/2 flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant tracking-widest">[SYS_01] // ARCHIVE 2024</span>
+<span class="bg-surface-container font-label-mono-sm text-label-mono-sm px-space-xs py-0.5 text-primary font-medium uppercase">React.js Web Application</span>
+</div>
+<h3 class="font-display-xl-mobile md:font-headline-lg text-display-xl-mobile md:text-headline-lg uppercase tracking-tight text-primary leading-tight">
+                The Oban Whiskey
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Developed a responsive React.js-based web application for a premier brand website, focusing on UI performance, component reusability and seamless API integration. Architectural focus was directed at eliminating asset rendering bottlenecks and establishing a composable component library.
+              </p>
+</div>
+<div class="space-y-space-md pt-space-sm">
+<div class="space-y-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase tracking-wider block">Key Focus Directives:</span>
+<div class="flex flex-wrap gap-space-xs">
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1">Responsive Development</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1">Component Reusability</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1">UI Performance</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1">API Integration</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<span>CORE STACK: REACT.JS • ES6+ • CSS3</span>
+<span class="flex items-center gap-1 text-primary font-medium hover:underline cursor-pointer">
+<span>SPECIFICATION</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</span>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 relative bg-surface-container-low min-h-[280px] lg:min-h-full overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Editorial architectural photo of a minimalist premium whiskey bottle product display website interface, dark modern studio lighting, muted amber and charcoal accents, highly crisp typography, clean browser mockup frame, high-end commercial digital interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkWI5Sfg2FOm3DgNL2HzIMjxW1fLbdalwoBxfaReNu7C-3X_4x_bpMBsl6ITiPE3QxZBzEvHSChr5QKb4MSZ5Fo0VnAVd5Mmb9MvJxTe5kj3ce993NjrsNe0jlDD2Xbm7UgRCmAZpCHtfwjS6iAPtvIWuxAD0gFxmSbKS9WreDOidYZpz2dAHXRsvzzRFlzdQp6uWFQhVTt7UH9I0VuLP23KZLrewpbBNq_zoFFyrAivFdU7FApC4"/>
+<div class="absolute bottom-space-md left-space-md bg-surface/90 backdrop-blur-sm px-space-sm py-space-xs font-label-mono-sm text-label-mono-sm text-primary">
+              FIG. 01 // UI RUNTIME PREVIEW
+            </div>
+</div>
+</article>
+<!-- PROJECT 02: HAPPIEST RESUME -->
+<article class="bg-surface-container-lowest p-space-lg md:p-space-xl shadow-sm flex flex-col lg:flex-row-reverse gap-space-xl items-stretch">
+<div class="w-full lg:w-1/2 flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant tracking-widest">[SYS_02] // ARCHIVE 2024</span>
+<span class="bg-surface-container font-label-mono-sm text-label-mono-sm px-space-xs py-0.5 text-primary font-medium uppercase">Laravel Web Application</span>
+</div>
+<h3 class="font-display-xl-mobile md:font-headline-lg text-display-xl-mobile md:text-headline-lg uppercase tracking-tight text-primary leading-tight">
+                Happiest Resume
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Built an enterprise-grade Laravel resume builder platform that empowers users to create, customize, and instantaneously download professional resumes. Structured around complex relational document models, real-time input validation, and high-fidelity PDF export compilation.
+              </p>
+</div>
+<div class="space-y-space-md pt-space-sm">
+<div class="space-y-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase tracking-wider block">Engineered Deliverables:</span>
+<div class="flex flex-wrap gap-space-xs">
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1">Secure Authentication</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1">Form Validation</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1">Database-Driven Templates</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1">Resume Customization</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1">Resume Download (PDF)</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<span>CORE STACK: LARAVEL • MYSQL • BLADE • JS</span>
+<span class="flex items-center gap-1 text-primary font-medium hover:underline cursor-pointer">
+<span>SPECIFICATION</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</span>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 relative bg-surface-container-low min-h-[280px] lg:min-h-full overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Modern web application dashboard for a resume creator software, clean geometric grid layout, document preview panel showing resume typography, crisp monochromatic interface, soft shadows, desktop computer viewport mockup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV3ykELtdLnt17JGilRMyslmqZ2wlIaaO8X1odL0WKcSz9mrJaSW1hKlRzA47YW66tbTLPcQIX2K_DcGeYeccEfyq1ltSU6q36siCqb9xIfciin3eH-jBc9v6sZXMRFS9YnHneu0qjF_0x8mrWv96wOJO6Q7Ed5vSvZBKXc_MOkLyBh51m_M5P-aHDE09okv3qruV7lQdYIDjiMTABYo7LbUlmvUeTjgrKxs7362h53Ml8JncxibQ"/>
+<div class="absolute bottom-space-md left-space-md bg-surface/90 backdrop-blur-sm px-space-sm py-space-xs font-label-mono-sm text-label-mono-sm text-primary">
+              FIG. 02 // DOCUMENT ENGINE
+            </div>
+</div>
+</article>
+<!-- PROJECT 03: ADM BRIEF INTEGRATION -->
+<article class="bg-surface-container-lowest p-space-lg md:p-space-xl shadow-sm flex flex-col lg:flex-row gap-space-xl items-stretch">
+<div class="w-full lg:w-1/2 flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant tracking-widest">[SYS_03] // ARCHIVE 2023</span>
+<span class="bg-surface-container font-label-mono-sm text-label-mono-sm px-space-xs py-0.5 text-primary font-medium uppercase">Core PHP Backend Integration</span>
+</div>
+<h3 class="font-display-xl-mobile md:font-headline-lg text-display-xl-mobile md:text-headline-lg uppercase tracking-tight text-primary leading-tight">
+                ADM Brief Integration
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Implemented Core PHP backend integrations for ADM Brief, focusing on mission-critical third-party API communication, asynchronous data synchronization, and rigorous fault-tolerant error recovery workflows to preserve operational integrity.
+              </p>
+</div>
+<div class="space-y-space-md pt-space-sm">
+<div class="space-y-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase tracking-wider block">Key System Architectures:</span>
+<div class="flex flex-wrap gap-space-xs">
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1">API Integration</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1">Data Synchronization</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1">Backend Development</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1">Error Handling &amp; Logging</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<span>CORE STACK: CORE PHP • CURL • REST • MYSQL</span>
+<span class="flex items-center gap-1 text-primary font-medium hover:underline cursor-pointer">
+<span>SPECIFICATION</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</span>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 relative bg-surface-container-low min-h-[280px] lg:min-h-full overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Technical data pipeline architecture visualization showing API request flows, server payload logs, JSON structure schemas, terminal code monitors, crisp monochromatic aesthetic with deep blacks and cool slates." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4pHbyOXawxYXbdnibSLTsKse3B8X37xgoXuoKmPyNlQI00rFIdXpvQp-Ifm-Wvpex3XgkGmI7JpzXUJA0DBE2wE2ZDY24F1Skcri7mfVPCgM5pydbVxZv30Ca-9-g3BOvegQe77NYFK9I6GRLjMmzwvMt8kKOxPd1j0AK8HClOxiCY2FfQmfkvCX5kvFcgDhz1B5S-c0vlJpY5aYER3hE7tI8JnanhasixjpsrrNGlRDKmDrUoeY"/>
+<div class="absolute bottom-space-md left-space-md bg-surface/90 backdrop-blur-sm px-space-sm py-space-xs font-label-mono-sm text-label-mono-sm text-primary">
+              FIG. 03 // INTEGRATION FABRIC
+            </div>
+</div>
+</article>
+<!-- PROJECT 04: WHITE FORCE HRMS -->
+<article class="bg-surface-container-lowest p-space-lg md:p-space-xl shadow-sm flex flex-col lg:flex-row-reverse gap-space-xl items-stretch">
+<div class="w-full lg:w-1/2 flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant tracking-widest">[SYS_04] // ARCHIVE 2023–2024</span>
+<span class="bg-surface-container font-label-mono-sm text-label-mono-sm px-space-xs py-0.5 text-primary font-medium uppercase">Human Resource Management System</span>
+</div>
+<h3 class="font-display-xl-mobile md:font-headline-lg text-display-xl-mobile md:text-headline-lg uppercase tracking-tight text-primary leading-tight">
+                White Force HRMS
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Contributed to a massive enterprise-scale Laravel HRMS platform servicing multi-tier recruitment cycles. Core engineering encompassed multi-variable payroll processing, candidate recruitment pipelines, and two-way integration across 16+ external job boards.
+              </p>
+</div>
+<div class="space-y-space-md pt-space-sm">
+<div class="space-y-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase tracking-wider block">Enterprise Modules:</span>
+<div class="flex flex-wrap gap-space-xs">
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1">Payroll Management</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1">Recruitment Management</span>
+<span class="bg-primary text-on-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1 font-medium">16+ Job Portals Sync</span>
+<span class="bg-surface-container-low text-primary font-label-mono-sm text-label-mono-sm px-space-sm py-1">Workflow Automation</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<span>CORE STACK: LARAVEL • MYSQL • QUEUES • REST APIS</span>
+<span class="flex items-center gap-1 text-primary font-medium hover:underline cursor-pointer">
+<span>SPECIFICATION</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</span>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 relative bg-surface-container-low min-h-[280px] lg:min-h-full overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Enterprise HR software dashboard screen displaying payroll processing tables, candidate recruitment pipelines, employee metrics, crisp clean corporate UI design, slate gray and white tones, high resolution desktop screengrab." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyJrJG3cSzRvoOAqqUUo-a6KSS82e055aTBvoS5-SPxuO7y_A2f3KV5VsmSuZUhwPK4QFxqXB5f6VFzIEofpQavNjlA_897_WNlqa6Z2yvwoMrvKrPT9kbVYqTh7WpCxljVNm8wHwIjhHPXlPU02Ltf6wNkGuyWniQH8OCXmzEfKgT1xZZ3Qxr22_RAQNzxlljHa0PFHeH4XHmAvLL2rZDmpIHbiKN1aIFaHYlyFqdx3_jXEtxYJM"/>
+<div class="absolute bottom-space-md left-space-md bg-surface/90 backdrop-blur-sm px-space-sm py-space-xs font-label-mono-sm text-label-mono-sm text-primary">
+              FIG. 04 // ENTERPRISE HRMS ENGINE
+            </div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- SECTION 05: TECHNICAL DRILLDOWN (TABULAR LEDGER) -->
+<section class="w-full bg-surface-container-low px-margin md:px-margin-tablet lg:px-margin-desktop py-space-2xl">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div class="space-y-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase tracking-widest block">04 // Ledger Index</span>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight uppercase">
+            System Implementation Audit
+          </h2>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">TOTAL PROJECTS DOCUMENTED: 04</span>
+</div>
+<!-- Tabular Records -->
+<div class="w-full bg-surface-container-lowest overflow-x-auto shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high text-primary font-label-mono-sm text-label-mono-sm uppercase">
+<th class="p-space-md">Identifier</th>
+<th class="p-space-md">Application Title</th>
+<th class="p-space-md">Primary Engine</th>
+<th class="p-space-md">Domain / Scope</th>
+<th class="p-space-md">Key Deliverable</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high font-label-mono-md text-label-mono-md">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-space-md text-on-surface-variant font-mono text-label-mono-sm">#SYS-01</td>
+<td class="p-space-md font-medium text-primary">The Oban Whiskey</td>
+<td class="p-space-md text-on-surface">React.js</td>
+<td class="p-space-md text-on-surface-variant">Brand Experience</td>
+<td class="p-space-md text-on-surface-variant">High-performance UI &amp; Component Reusability</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-space-md text-on-surface-variant font-mono text-label-mono-sm">#SYS-02</td>
+<td class="p-space-md font-medium text-primary">Happiest Resume</td>
+<td class="p-space-md text-on-surface">Laravel</td>
+<td class="p-space-md text-on-surface-variant">Document Generation SaaS</td>
+<td class="p-space-md text-on-surface-variant">Customization Engine &amp; Dynamic PDF Compilation</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-space-md text-on-surface-variant font-mono text-label-mono-sm">#SYS-03</td>
+<td class="p-space-md font-medium text-primary">ADM Brief Integration</td>
+<td class="p-space-md text-on-surface">Core PHP</td>
+<td class="p-space-md text-on-surface-variant">Backend Middleware</td>
+<td class="p-space-md text-on-surface-variant">Third-Party Sync &amp; Error Handling System</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-space-md text-on-surface-variant font-mono text-label-mono-sm">#SYS-04</td>
+<td class="p-space-md font-medium text-primary">White Force HRMS</td>
+<td class="p-space-md text-on-surface">Laravel / MySQL</td>
+<td class="p-space-md text-on-surface-variant">Enterprise Resource Platform</td>
+<td class="p-space-md text-on-surface-variant">16+ Portal Aggregator &amp; Payroll Automation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- SECTION 06: CALL TO ACTION FOOTER BANNER -->
+<section class="w-full bg-primary text-on-primary px-margin md:px-margin-tablet lg:px-margin-desktop py-space-2xl">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-space-xl">
+<div class="space-y-space-sm max-w-2xl">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-primary/60 tracking-widest block">Available For Immediate Engagement</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg tracking-tight uppercase">
+          Ready to construct resilient web systems.
+        </h2>
+<p class="font-body-md text-body-md text-on-primary/80">
+          Available for contract architecture, enterprise backend development, or high-performance React frontends. Rate range: $12–$25 / hour.
+        </p>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md w-full md:w-auto">
+<a class="bg-on-primary text-primary hover:bg-surface-container transition-colors font-label-mono-md text-label-mono-md uppercase px-space-xl py-space-md flex items-center justify-center gap-space-sm font-medium" href="mailto:akesharwani.info@gmail.com">
+<span>Initialize Contact</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</a>
+<a class="bg-primary border border-on-primary/20 text-on-primary hover:bg-on-primary/10 transition-colors font-label-mono-md text-label-mono-md uppercase px-space-xl py-space-md flex items-center justify-center gap-space-sm" data-path="contact" href="#">
+<span>View Availability</span>
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</a>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low"><div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop pt-space-2xl pb-space-xl"><div class="flex flex-col md:flex-row md:items-end justify-between pb-space-xl gap-space-lg"><div class="space-y-space-xs"><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase tracking-widest block">Master Architect &amp; Engineer Index</span><span class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl uppercase tracking-tighter text-primary block leading-none">Aditya Kesharwani</span></div><div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant max-w-md bg-surface-container p-space-md"><span class="text-primary font-medium block mb-1">Specialization Matrix:</span>Laravel • PHP • React.js • JavaScript • TypeScript • AI Automation</div></div><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop py-space-xl"><div class="space-y-space-md"><span class="font-label-mono-sm text-label-mono-sm uppercase text-primary font-medium tracking-wider block">01 / Navigation</span><ul class="space-y-space-xs font-label-mono-md text-label-mono-md"><li><a class="text-on-surface-variant hover:text-on-surface transition-colors block" data-path="overview" href="#">Overview</a></li><li><a class="text-on-surface-variant hover:text-on-surface transition-colors block" data-path="about" href="#">About Dossier</a></li><li><a class="text-on-surface-variant hover:text-on-surface transition-colors block" data-path="experience" href="#">Work Experience</a></li><li><a class="text-on-surface-variant hover:text-on-surface transition-colors block" data-path="projects" href="#">Selected Projects</a></li><li><a class="text-on-surface-variant hover:text-on-surface transition-colors block" data-path="skills" href="#">Technical Index</a></li></ul></div><div class="space-y-space-md"><span class="font-label-mono-sm text-label-mono-sm uppercase text-primary font-medium tracking-wider block">02 / Direct Contact</span><div class="space-y-space-sm font-label-mono-sm text-label-mono-sm text-on-surface-variant"><div><span class="block text-primary font-medium">Electronic Mail:</span><a class="hover:text-on-surface transition-colors" href="mailto:akesharwani.info@gmail.com">akesharwani.info@gmail.com</a></div><div><span class="block text-primary font-medium">Direct Line:</span><a class="hover:text-on-surface transition-colors" href="tel:+919203530069">+91 9203530069</a></div><div><span class="block text-primary font-medium">Availability Status:</span><span class="text-on-surface">Immediate / Full-time &amp; Contract</span></div></div></div><div class="space-y-space-md"><span class="font-label-mono-sm text-label-mono-sm uppercase text-primary font-medium tracking-wider block">03 / Network &amp; Profiles</span><div class="space-y-space-xs font-label-mono-md text-label-mono-md"><div><a class="text-on-surface-variant hover:text-on-surface flex items-center justify-between transition-colors py-0.5" href="https://github.com" rel="noreferrer" target="_blank"><span>GitHub</span><span class="material-symbols-outlined text-[16px]">north_east</span></a></div><div><a class="text-on-surface-variant hover:text-on-surface flex items-center justify-between transition-colors py-0.5" href="https://linkedin.com" rel="noreferrer" target="_blank"><span>LinkedIn</span><span class="material-symbols-outlined text-[16px]">north_east</span></a></div><div><a class="text-on-surface-variant hover:text-on-surface flex items-center justify-between transition-colors py-0.5" data-path="contact" href="#"><span>Schedule Briefing</span><span class="material-symbols-outlined text-[16px]">north_east</span></a></div></div></div><div class="space-y-space-md"><span class="font-label-mono-sm text-label-mono-sm uppercase text-primary font-medium tracking-wider block">04 / Origin &amp; Base</span><div class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><p class="text-on-surface font-medium">Jabalpur, Madhya Pradesh, India</p><p>UTC+05:30 (IST Zone)</p><p class="mt-space-sm">Remote-first architecture, serving engineering teams globally.</p></div></div></div><div class="pt-space-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant"><p class="max-w-xl">Building scalable web solutions with clean architecture, modern technology and practical engineering.</p><p>© 2026 Aditya Kesharwani. All rights reserved.</p></div></div></footer></body></html>

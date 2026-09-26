@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#f2f4f6", "on-surface-variant": "#46464b", "on-tertiary-fixed": "#0b1c30", "primary-container": "#1a1b21", "surface-container": "#eceef0", "tertiary-fixed": "#d3e4fe", "on-secondary-fixed": "#0d1c2f", "secondary": "#515f74", "on-primary-fixed": "#1a1b21", "on-tertiary-container": "#75859d", "on-primary": "#ffffff", "surface-tint": "#5e5e64", "tertiary-fixed-dim": "#b7c8e1", "tertiary": "#000000", "primary-fixed-dim": "#c7c6cd", "secondary-fixed": "#d5e3fd", "on-secondary-fixed-variant": "#3a485c", "surface-container-high": "#e6e8ea", "tertiary-container": "#0b1c30", "outline": "#77767b", "surface-container-highest": "#e0e3e5", "primary": "#000000", "background": "#f7f9fb", "outline-variant": "#c7c6cb", "on-surface": "#191c1e", "inverse-primary": "#c7c6cd", "secondary-fixed-dim": "#b9c7e0", "secondary-container": "#d5e3fd", "on-primary-container": "#83838a", "inverse-surface": "#2d3133", "inverse-on-surface": "#eff1f3", "on-error-container": "#93000a", "primary-fixed": "#e3e1e9", "surface-dim": "#d8dadc", "on-secondary": "#ffffff", "on-error": "#ffffff", "on-primary-fixed-variant": "#46464c", "surface-variant": "#e0e3e5", "on-secondary-container": "#57657b", "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#38485d", "surface-container-lowest": "#ffffff", "on-background": "#191c1e", "surface-bright": "#f7f9fb", "error": "#ba1a1a", "surface": "#f7f9fb", "on-tertiary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-xs": "0.25rem", "margin-desktop": "4rem", "gutter": "1.5rem", "space-md": "1rem", "margin": "1.25rem", "margin-tablet": "2.5rem", "gutter-desktop": "2rem", "space-xl": "2.5rem", "space-2xl": "4rem", "space-sm": "0.5rem" }, "fontFamily": { "display-xl": [ "Space Grotesk" ], "headline-md": [ "Space Grotesk" ], "body-lg": [ "Inter" ], "label-mono-md": [ "JetBrains Mono" ], "body-sm": [ "Inter" ], "stat-counter": [ "Space Grotesk" ], "headline-lg-mobile": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "display-xl-mobile": [ "Space Grotesk" ], "body-md": [ "Inter" ], "headline-sm": [ "Space Grotesk" ], "label-mono-sm": [ "JetBrains Mono" ] }, "fontSize": { "display-xl": [ "4rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.04em", "fontWeight": "600" } ], "headline-md": [ "1.5rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "body-lg": [ "1.125rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-mono-md": [ "0.8125rem", { "lineHeight": "1rem", "letterSpacing": "0.04em", "fontWeight": "500" } ], "body-sm": [ "0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "0em", "fontWeight": "400" } ], "stat-counter": [ "3.5rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.04em", "fontWeight": "400" } ], "headline-lg-mobile": [ "1.75rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "headline-lg": [ "2.5rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.03em", "fontWeight": "500" } ], "display-xl-mobile": [ "2.5rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "body-md": [ "0.9375rem", { "lineHeight": "1.5rem", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-mono-sm": [ "0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.06em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex flex-col group" data-path="overview" href="#"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-primary">Aditya Kesharwani</span><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant font-medium">/ DEV</span></div><div class="flex items-center gap-space-sm mt-0.5"><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Full Stack Developer</span><span class="hidden xl:inline-flex items-center gap-1 font-label-mono-sm text-label-mono-sm text-primary bg-surface-container-high px-space-xs py-0.5"><span>●</span> Available ($12–$25/hr)</span></div></a></div><nav class="hidden lg:flex items-center bg-surface-container-low p-1" data-active-classes="bg-primary text-on-primary font-medium"><a class="font-label-mono-md text-label-mono-md uppercase px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="#">Overview</a><a aria-current="page" class="uppercase px-space-md py-space-xs transition-colors bg-primary text-on-primary font-medium" data-path="about" href="#">About</a><a class="font-label-mono-md text-label-mono-md uppercase px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="experience" href="#">Experience</a><a class="font-label-mono-md text-label-mono-md uppercase px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="projects" href="#">Projects</a><a class="font-label-mono-md text-label-mono-md uppercase px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="skills" href="#">Skills</a><a class="font-label-mono-md text-label-mono-md uppercase px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="hire-me" href="#">Hire Me</a><a class="font-label-mono-md text-label-mono-md uppercase px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:flex items-center justify-center w-9 h-9 bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface" href="mailto:akesharwani.info@gmail.com" title="Copy email address"><span class="material-symbols-outlined text-[18px]">mail</span></a><a class="font-label-mono-md text-label-mono-md uppercase bg-primary text-on-primary hover:bg-secondary transition-colors px-space-md py-2 flex items-center gap-space-xs" data-path="hire-me" href="#"><span>Hire Me</span><span class="material-symbols-outlined text-[16px]">north_east</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
+<!-- SECTION 1: ARCHITECTURAL DOSSIER HEADER -->
+<section class="w-full bg-surface-container-low px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl md:py-space-2xl">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-space-xl">
+<!-- Status Meta Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 bg-primary"></span>
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant tracking-widest">DOSSIER // EXP_REF_2026 // ADITYA KESHARWANI</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-mono-sm text-label-mono-sm uppercase bg-surface-container text-on-surface px-space-sm py-1">SYS STATUS: PRODUCTION READY</span>
+<span class="font-label-mono-sm text-label-mono-sm uppercase bg-primary text-on-primary px-space-sm py-1 font-medium">LOC: IST (UTC+05:30)</span>
+</div>
+</div>
+<!-- Main Headline Block -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<span class="font-label-mono-md text-label-mono-md uppercase tracking-wider text-secondary">ABOUT ME &amp; EXPERIENCE</span>
+<h1 class="font-display-xl text-display-xl tracking-tighter text-primary uppercase leading-none">
+            Behind the<br/>Code.
+          </h1>
+<p class="font-headline-md text-headline-md text-on-surface-variant tracking-tight mt-space-xs">
+            Developer. Problem Solver. Builder.
+          </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-sm leading-relaxed">
+            I am Aditya Kesharwani, a Full Stack Developer with 5+ years of experience designing, developing, and maintaining scalable web applications. My core expertise includes Laravel, PHP, React.js, JavaScript, TypeScript, RESTful APIs, MySQL, authentication systems, background jobs, third-party integrations, AI automation, and cloud deployment. I enjoy solving complex technical problems and turning business requirements into reliable production-ready applications.
+          </p>
+</div>
+<!-- Metric Counter / Spec Inset -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between h-full">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant">SPEC // ARCHITECTURE SUMMARY</span>
+<span class="material-symbols-outlined text-primary text-[20px]">terminal</span>
+</div>
+<div class="my-space-md">
+<span class="font-stat-counter text-stat-counter text-primary block tracking-tighter">05+</span>
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-secondary font-medium tracking-wide">Years Continuous Production Engineering</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed bg-surface-container-low p-space-md">
+              Backend Developer with 5+ years of experience working across backend architecture, frontend development, API development, database optimization, security, automation, and cloud deployment. I have worked in Agile/Scrum environments and collaborated with cross-functional teams to deliver features for international clients.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: TECHNICAL CAPABILITY HIGHLIGHTS (Bento Matrix) -->
+<section class="w-full bg-surface px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm pb-space-sm">
+<div>
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant block">INDEX // 02</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-primary tracking-tight">Core Competency Matrix</h2>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">8 KEY PRODUCTION VECTORS VERIFIED</span>
+</div>
+<!-- 4x2 Grid of Structural Badges -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:bg-surface-container-high transition-colors flex flex-col justify-between group">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">VEC_01</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+<div class="mt-space-lg">
+<span class="font-headline-sm text-headline-sm text-primary block group-hover:translate-x-1 transition-transform">5+ Years Professional Experience</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-1 block">Production lifecycle proven</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:bg-surface-container-high transition-colors flex flex-col justify-between group">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">VEC_02</span>
+<span class="material-symbols-outlined text-primary text-[18px]">layers</span>
+</div>
+<div class="mt-space-lg">
+<span class="font-headline-sm text-headline-sm text-primary block group-hover:translate-x-1 transition-transform">Production Web App Development</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-1 block">Robust ERP, CRM, &amp; Portals</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:bg-surface-container-high transition-colors flex flex-col justify-between group">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">VEC_03</span>
+<span class="material-symbols-outlined text-primary text-[18px]">public</span>
+</div>
+<div class="mt-space-lg">
+<span class="font-headline-sm text-headline-sm text-primary block group-hover:translate-x-1 transition-transform">International Client Experience</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-1 block">Cross-border enterprise teams</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:bg-surface-container-high transition-colors flex flex-col justify-between group">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">VEC_04</span>
+<span class="material-symbols-outlined text-primary text-[18px]">api</span>
+</div>
+<div class="mt-space-lg">
+<span class="font-headline-sm text-headline-sm text-primary block group-hover:translate-x-1 transition-transform">Backend &amp; REST API Systems</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-1 block">High throughput JSON protocols</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:bg-surface-container-high transition-colors flex flex-col justify-between group">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">VEC_05</span>
+<span class="material-symbols-outlined text-primary text-[18px]">smart_toy</span>
+</div>
+<div class="mt-space-lg">
+<span class="font-headline-sm text-headline-sm text-primary block group-hover:translate-x-1 transition-transform">AI Integration &amp; Automation</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-1 block">LLM connectors &amp; auto-pipelines</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:bg-surface-container-high transition-colors flex flex-col justify-between group">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">VEC_06</span>
+<span class="material-symbols-outlined text-primary text-[18px]">cloud</span>
+</div>
+<div class="mt-space-lg">
+<span class="font-headline-sm text-headline-sm text-primary block group-hover:translate-x-1 transition-transform">Cloud Infrastructure &amp; CI/CD</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-1 block">AWS EC2, S3, Azure, GitHub</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:bg-surface-container-high transition-colors flex flex-col justify-between group">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">VEC_07</span>
+<span class="material-symbols-outlined text-primary text-[18px]">database</span>
+</div>
+<div class="mt-space-lg">
+<span class="font-headline-sm text-headline-sm text-primary block group-hover:translate-x-1 transition-transform">Database Optimization</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-1 block">MySQL indexing, query tuning</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:bg-surface-container-high transition-colors flex flex-col justify-between group">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">VEC_08</span>
+<span class="material-symbols-outlined text-primary text-[18px]">sync_alt</span>
+</div>
+<div class="mt-space-lg">
+<span class="font-headline-sm text-headline-sm text-primary block group-hover:translate-x-1 transition-transform">Agile / Scrum Execution</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-1 block">Sprint cadence &amp; fast shipping</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: PERSONAL WORKING APPROACH (6-Step Blueprint Workflow) -->
+<section class="w-full bg-surface-container-low px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl md:py-space-2xl">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant block">METHODOLOGY // DISCIPLINE</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-primary tracking-tight">Structured Engineering Protocol</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+          A systematic framework turning ambiguous product goals into fault-tolerant, maintainable software architectures.
+        </p>
+</div>
+<!-- 6-step flow cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-space-md">
+<!-- Step 01 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between min-h-[220px]">
+<div>
+<span class="font-label-mono-md text-label-mono-md text-secondary block font-bold">01 //</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-space-sm uppercase">Understand Problem</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-md leading-snug">
+            Deconstruct client requirements, analyze domain workflows, and identify system constraints.
+          </p>
+<div class="mt-space-md h-1 w-full bg-surface-container">
+<div class="h-full bg-primary w-1/6"></div>
+</div>
+</div>
+<!-- Step 02 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between min-h-[220px]">
+<div>
+<span class="font-label-mono-md text-label-mono-md text-secondary block font-bold">02 //</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-space-sm uppercase">Design Solution</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-md leading-snug">
+            Map relational entity schemas, API endpoints, flow diagrams, and edge cases prior to coding.
+          </p>
+<div class="mt-space-md h-1 w-full bg-surface-container">
+<div class="h-full bg-primary w-2/6"></div>
+</div>
+</div>
+<!-- Step 03 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between min-h-[220px]">
+<div>
+<span class="font-label-mono-md text-label-mono-md text-secondary block font-bold">03 //</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-space-sm uppercase">Build Architecture</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-md leading-snug">
+            Establish modular micro-services, background queue workers, and authorization boundaries.
+          </p>
+<div class="mt-space-md h-1 w-full bg-surface-container">
+<div class="h-full bg-primary w-3/6"></div>
+</div>
+</div>
+<!-- Step 04 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between min-h-[220px]">
+<div>
+<span class="font-label-mono-md text-label-mono-md text-secondary block font-bold">04 //</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-space-sm uppercase">Develop Product</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-md leading-snug">
+            Implement clean, typed application code with Laravel and modern React frameworks with strict conventions.
+          </p>
+<div class="mt-space-md h-1 w-full bg-surface-container">
+<div class="h-full bg-primary w-4/6"></div>
+</div>
+</div>
+<!-- Step 05 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between min-h-[220px]">
+<div>
+<span class="font-label-mono-md text-label-mono-md text-secondary block font-bold">05 //</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-space-sm uppercase">Test &amp; Optimize</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-md leading-snug">
+            Execute PHPUnit suites, optimize query indexes, audit security policies, and measure response times.
+          </p>
+<div class="mt-space-md h-1 w-full bg-surface-container">
+<div class="h-full bg-primary w-5/6"></div>
+</div>
+</div>
+<!-- Step 06 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between min-h-[220px]">
+<div>
+<span class="font-label-mono-md text-label-mono-md text-secondary block font-bold">06 //</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-space-sm uppercase">Deploy &amp; Maintain</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-md leading-snug">
+            Automate deployment via GitHub/Azure pipelines, monitor cloud instances, and patch continuously.
+          </p>
+<div class="mt-space-md h-1 w-full bg-surface-container">
+<div class="h-full bg-primary w-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: PROFESSIONAL EXPERIENCE TIMELINE (Deep Architectural Registry) -->
+<section class="w-full bg-surface px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl md:py-space-2xl">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-space-xl">
+<!-- Section Title & Narrative -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md pb-space-md">
+<div class="space-y-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant tracking-wider">CAREER TIMELINE // CHRONOLOGICAL</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-primary tracking-tight">Building. Improving. Delivering.</h2>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          Over 5+ years, I have worked across software development, backend engineering, API development, enterprise applications, and cloud deployment.
+        </p>
+</div>
+<!-- Timeline Entries Container -->
+<div class="flex flex-col gap-space-lg">
+<!-- EXPERIENCE ENTRY 01 -->
+<div class="bg-surface-container-lowest p-space-lg md:p-space-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-md bg-surface-container-low p-space-md">
+<div class="flex flex-wrap items-center gap-space-md">
+<span class="font-label-mono-md text-label-mono-md bg-primary text-on-primary px-space-sm py-1 font-bold">POS_01</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Kragos Technology</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Software Developer • Pune, Maharashtra</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-mono-md text-label-mono-md text-primary bg-surface-container-high px-space-md py-1 font-semibold">06/2026 – Present</span>
+<span class="w-3 h-3 bg-primary animate-pulse" title="Active Position"></span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop">
+<div class="lg:col-span-4 flex flex-col gap-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant font-bold">Scope of Engagement:</span>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Developing and maintaining ERP and CRM systems using PHP, Laravel, React.js, and TypeScript for international clients. Handling full enterprise development cycles with modern microservices and AWS cloud infrastructure.
+              </p>
+<div class="mt-space-md flex flex-wrap gap-1.5">
+<span class="font-label-mono-sm text-label-mono-sm bg-surface-container px-2 py-1 text-on-surface">Laravel</span>
+<span class="font-label-mono-sm text-label-mono-sm bg-surface-container px-2 py-1 text-on-surface">PHP</span>
+<span class="font-label-mono-sm text-label-mono-sm bg-surface-container px-2 py-1 text-on-surface">React.js</span>
+<span class="font-label-mono-sm text-label-mono-sm bg-surface-container px-2 py-1 text-on-surface">TypeScript</span>
+<span class="font-label-mono-sm text-label-mono-sm bg-surface-container px-2 py-1 text-on-surface">AWS EC2/S3</span>
+<span class="font-label-mono-sm text-label-mono-sm bg-surface-container px-2 py-1 text-on-surface">CI/CD DevOps</span>
+<span class="font-label-mono-sm text-label-mono-sm bg-surface-container px-2 py-1 text-on-surface">AI Workflows</span>
+</div>
+</div>
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant font-bold">Core Deliverables &amp; Architecture:</span>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="bg-surface-container-low p-space-md">
+<div class="flex items-center gap-space-xs text-primary mb-1">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+<span class="font-headline-sm text-headline-sm">ERP &amp; CRM Systems</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Architected and scaled core functional modules for cross-border enterprise clients ensuring multi-tenant segregation.
+                  </p>
+</div>
+<div class="bg-surface-container-low p-space-md">
+<div class="flex items-center gap-space-xs text-primary mb-1">
+<span class="material-symbols-outlined text-[18px]">smartphone</span>
+<span class="font-headline-sm text-headline-sm">RESTful APIs for Mobile</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Built performant, documented REST endpoints in Laravel to service companion iOS and Android native apps.
+                  </p>
+</div>
+<div class="bg-surface-container-low p-space-md">
+<div class="flex items-center gap-space-xs text-primary mb-1">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+<span class="font-headline-sm text-headline-sm">AI-Driven Automation</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Integrated intelligent automation into internal workflows, cutting processing latencies and repetitive operations.
+                  </p>
+</div>
+<div class="bg-surface-container-low p-space-md">
+<div class="flex items-center gap-space-xs text-primary mb-1">
+<span class="material-symbols-outlined text-[18px]">deployed_code</span>
+<span class="font-headline-sm text-headline-sm">Cloud CI/CD &amp; AWS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Configured zero-downtime deployment pipelines in GitHub and Azure DevOps; orchestrated AWS EC2 and S3 storage.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- EXPERIENCE ENTRY 02 -->
+<div class="bg-surface-container-lowest p-space-lg md:p-space-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-md bg-surface-container-low p-space-md">
+<div class="flex flex-wrap items-center gap-space-md">
+<span class="font-label-mono-md text-label-mono-md bg-secondary text-on-secondary px-space-sm py-1 font-bold">POS_02</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Valethi Technologies</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Software Developer • Nagpur, Maharashtra</span>
+</div>
+</div>
+<span class="font-label-mono-md text-label-mono-md text-primary bg-surface-container-high px-space-md py-1 font-semibold">10/2022 – 06/2026</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop">
+<div class="lg:col-span-4 flex flex-col gap-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant font-bold">Scope of Engagement:</span>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Developed scalable backend systems using PHP, Laravel, and MySQL for rigorous production environments. Maintained authentication protocols, payment infrastructures, and enterprise integrations.
+              </p>
+<!-- Quantified Performance Callout -->
+<div class="bg-surface-container p-space-md mt-space-sm flex flex-col gap-2">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-primary font-bold">Measurable Operational Gains:</span>
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Manual Effort:</span>
+<span class="font-label-mono-md text-label-mono-md font-bold text-primary">-40% Reduction</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Production Defects:</span>
+<span class="font-label-mono-md text-label-mono-md font-bold text-primary">-30% Reduced</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Backend Latency:</span>
+<span class="font-label-mono-md text-label-mono-md font-bold text-primary">+30% Speedup</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant font-bold">Key Architectural Deliverables:</span>
+<ul class="space-y-space-sm font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-space-sm bg-surface-container-low p-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_box</span>
+<span>Designed robust RESTful APIs with seamless integrations for payment gateways, SMS gateways, and transactional email systems, reducing manual effort by ~40%.</span>
+</li>
+<li class="flex items-start gap-space-sm bg-surface-container-low p-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">security</span>
+<span>Hardened application security through role-based access control (RBAC), CSRF protection, comprehensive input validation sanitization, and strict session isolation.</span>
+</li>
+<li class="flex items-start gap-space-sm bg-surface-container-low p-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">queue</span>
+<span>Engineered asynchronous queues and background workers for heavy report generation, automated digests, and high-frequency alerting triggers.</span>
+</li>
+<li class="flex items-start gap-space-sm bg-surface-container-low p-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">speed</span>
+<span>Optimized complex MySQL joins and composite indexes, cutting database roundtrips and driving 25–30% page load gains; authored PHPUnit test suites.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- EXPERIENCE ENTRY 03 -->
+<div class="bg-surface-container-lowest p-space-lg md:p-space-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-md bg-surface-container-low p-space-md">
+<div class="flex flex-wrap items-center gap-space-md">
+<span class="font-label-mono-md text-label-mono-md bg-surface-tint text-on-primary px-space-sm py-1 font-bold">POS_03</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">White Force</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Laravel Developer • Jabalpur, Madhya Pradesh</span>
+</div>
+</div>
+<span class="font-label-mono-md text-label-mono-md text-primary bg-surface-container-high px-space-md py-1 font-semibold">07/2021 – 10/2022</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop">
+<div class="lg:col-span-4 flex flex-col gap-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant font-bold">Scope of Engagement:</span>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Worked on Laravel-based HR and recruitment solutions with a focus on automation and workflow optimization. Connected recruitment platforms directly with 16+ external candidate sources.
+              </p>
+</div>
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant font-bold">Key Technical Contributions:</span>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-low p-space-md flex flex-col justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">PAYROLL PIPELINE</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                    Engineered automated payroll calculation modules in Laravel/MySQL, cutting payroll discrepancies by 40%.
+                  </p>
+</div>
+<div class="bg-surface-container-low p-space-md flex flex-col justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">16+ PORTAL SYNC</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                    Integrated real-time feeds with LinkedIn, Facebook, and Naukri, driving a 30% recruitment pipeline velocity surge.
+                  </p>
+</div>
+<div class="bg-surface-container-low p-space-md flex flex-col justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">RESUME GENERATOR</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                    Architected an interactive dynamic resume builder enabling candidate customization and real-time PDF rendering.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- EXPERIENCE ENTRY 04 -->
+<div class="bg-surface-container-lowest p-space-lg md:p-space-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-md bg-surface-container-low p-space-md">
+<div class="flex flex-wrap items-center gap-space-md">
+<span class="font-label-mono-md text-label-mono-md bg-outline text-on-primary px-space-sm py-1 font-bold">POS_04</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Seven Eye IT Solutions</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">PHP Developer Intern • Jabalpur, Madhya Pradesh</span>
+</div>
+</div>
+<span class="font-label-mono-md text-label-mono-md text-primary bg-surface-container-high px-space-md py-1 font-semibold">01/2021 – 07/2021</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop">
+<div class="lg:col-span-4 flex flex-col gap-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant font-bold">Scope of Engagement:</span>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Completed hands-on software development and engineering training in Core PHP, Object-Oriented Programming (OOP), and full client-server interactions.
+              </p>
+</div>
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant font-bold">Foundational Implementations:</span>
+<ul class="space-y-space-xs font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+<span>Built dynamic web applications adhering strictly to OOP principles in Core PHP.</span>
+</li>
+<li class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">javascript</span>
+<span>Enhanced frontend user interactions and form validations utilizing JavaScript and jQuery.</span>
+</li>
+<li class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">devices</span>
+<span>Developed responsive UI components prioritizing client device adaptability.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: EDUCATION & CERTIFICATIONS DUAL CARD SECTION -->
+<section class="w-full bg-surface-container-low px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl md:py-space-2xl">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm pb-space-sm">
+<div>
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant block">ACADEMIC &amp; CREDENTIAL RECORD</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-primary tracking-tight">Education &amp; Certifications</h2>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">DOCUMENTATION VALIDATED // 2017–2026</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter-desktop">
+<!-- Education Card -->
+<div class="bg-surface-container-lowest p-space-lg md:p-space-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-md bg-surface-container-low p-space-md mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">school</span>
+<span class="font-headline-md text-headline-md uppercase text-primary font-bold">Academic Degrees</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm bg-surface-container px-space-sm py-1 uppercase text-on-surface">Formal Study</span>
+</div>
+<div class="space-y-space-lg">
+<!-- Degree 1: MCA -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-md hover:bg-surface-container transition-colors">
+<div class="flex flex-wrap items-center justify-between gap-1">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">MCA — Master of Computer Applications</span>
+<span class="font-label-mono-sm text-label-mono-sm bg-primary text-on-primary px-space-xs py-0.5">COMPLETED 07/2021</span>
+</div>
+<span class="font-label-mono-md text-label-mono-md text-secondary font-medium">Specialization: Information Technology</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Gyan Ganga College of Technology, Jabalpur, Madhya Pradesh
+                </p>
+</div>
+<!-- Degree 2: BCA -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-md hover:bg-surface-container transition-colors">
+<div class="flex flex-wrap items-center justify-between gap-1">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">BCA — Bachelor of Computer Application</span>
+<span class="font-label-mono-sm text-label-mono-sm bg-surface-container-highest text-on-surface px-space-xs py-0.5">COMPLETED 06/2019</span>
+</div>
+<span class="font-label-mono-md text-label-mono-md text-secondary font-medium">Specialization: Information Technology</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Jabalpur College of Computer Communication, Jabalpur, Madhya Pradesh
+                </p>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md flex items-center justify-between font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<span>RGPV / RDVV AFFILIATED</span>
+<span class="flex items-center gap-1 text-primary"><span class="material-symbols-outlined text-[16px]">verified</span> DEGREE RECORD VERIFIED</span>
+</div>
+</div>
+<!-- Certifications Card -->
+<div class="bg-surface-container-lowest p-space-lg md:p-space-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-md bg-surface-container-low p-space-md mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">workspace_premium</span>
+<span class="font-headline-md text-headline-md uppercase text-primary font-bold">Accreditations</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm bg-surface-container px-space-sm py-1 uppercase text-on-surface">Validated</span>
+</div>
+<div class="space-y-space-md">
+<!-- Cert 1 -->
+<div class="flex items-center justify-between bg-surface-container-low p-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center font-label-mono-md font-bold">
+                    GA
+                  </div>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block">Google Analytics Certification</span>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">Issuer: Great Learning Academy</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">check_circle</span>
+</div>
+<!-- Cert 2 -->
+<div class="flex items-center justify-between bg-surface-container-low p-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center font-label-mono-md font-bold">
+                    SQL
+                  </div>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block">SQL (Basic &amp; Intermediate)</span>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">Issuer: HackerRank Assessment</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">check_circle</span>
+</div>
+<!-- Cert 3 -->
+<div class="flex items-center justify-between bg-surface-container-low p-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center font-label-mono-md font-bold">
+                    JS
+                  </div>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block">Node.js Fundamentals</span>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">Issuer: Online Professional Accreditation</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">check_circle</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md flex items-center justify-between font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<span>CONTINUOUS LEARNING INDEX</span>
+<span class="text-primary font-medium">SKILL VERIFICATION ACTIVE</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: ARCHITECTURAL CTA CALLOUT -->
+<section class="w-full bg-primary text-on-primary px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-space-lg">
+<div class="space-y-space-xs max-w-2xl">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-primary-container tracking-widest block">NEXT STEPS // COLLABORATION</span>
+<h3 class="font-headline-lg text-headline-lg uppercase tracking-tight text-on-primary">Need this caliber of engineering?</h3>
+<p class="font-body-md text-body-md text-on-primary-container">
+          Available for contract architecture, complex backend API delivery, or full-time strategic engineering appointments.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-md">
+<a class="font-label-mono-md text-label-mono-md uppercase bg-surface text-primary hover:bg-surface-container transition-colors px-space-lg py-space-sm font-semibold flex items-center gap-space-xs" data-path="contact" href="#">
+<span>Initiate Contact</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<a class="font-label-mono-md text-label-mono-md uppercase bg-primary-container text-on-primary hover:bg-secondary transition-colors px-space-lg py-space-sm font-semibold flex items-center gap-space-xs" data-path="projects" href="#">
+<span>View Production Code</span>
+<span class="material-symbols-outlined text-[16px]">north_east</span>
+</a>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low"><div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop pt-space-2xl pb-space-xl"><div class="flex flex-col md:flex-row md:items-end justify-between pb-space-xl gap-space-lg"><div class="space-y-space-xs"><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase tracking-widest block">Master Architect &amp; Engineer Index</span><span class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl uppercase tracking-tighter text-primary block leading-none">Aditya Kesharwani</span></div><div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant max-w-md bg-surface-container p-space-md"><span class="text-primary font-medium block mb-1">Specialization Matrix:</span>Laravel • PHP • React.js • JavaScript • TypeScript • AI Automation</div></div><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop py-space-xl"><div class="space-y-space-md"><span class="font-label-mono-sm text-label-mono-sm uppercase text-primary font-medium tracking-wider block">01 / Navigation</span><ul class="space-y-space-xs font-label-mono-md text-label-mono-md"><li><a class="text-on-surface-variant hover:text-on-surface transition-colors block" data-path="overview" href="#">Overview</a></li><li><a class="text-on-surface-variant hover:text-on-surface transition-colors block" data-path="about" href="#">About Dossier</a></li><li><a class="text-on-surface-variant hover:text-on-surface transition-colors block" data-path="experience" href="#">Work Experience</a></li><li><a class="text-on-surface-variant hover:text-on-surface transition-colors block" data-path="projects" href="#">Selected Projects</a></li><li><a class="text-on-surface-variant hover:text-on-surface transition-colors block" data-path="skills" href="#">Technical Index</a></li></ul></div><div class="space-y-space-md"><span class="font-label-mono-sm text-label-mono-sm uppercase text-primary font-medium tracking-wider block">02 / Direct Contact</span><div class="space-y-space-sm font-label-mono-sm text-label-mono-sm text-on-surface-variant"><div><span class="block text-primary font-medium">Electronic Mail:</span><a class="hover:text-on-surface transition-colors" href="mailto:akesharwani.info@gmail.com">akesharwani.info@gmail.com</a></div><div><span class="block text-primary font-medium">Direct Line:</span><a class="hover:text-on-surface transition-colors" href="tel:+919203530069">+91 9203530069</a></div><div><span class="block text-primary font-medium">Availability Status:</span><span class="text-on-surface">Immediate / Full-time &amp; Contract</span></div></div></div><div class="space-y-space-md"><span class="font-label-mono-sm text-label-mono-sm uppercase text-primary font-medium tracking-wider block">03 / Network &amp; Profiles</span><div class="space-y-space-xs font-label-mono-md text-label-mono-md"><div><a class="text-on-surface-variant hover:text-on-surface flex items-center justify-between transition-colors py-0.5" href="https://github.com" rel="noreferrer" target="_blank"><span>GitHub</span><span class="material-symbols-outlined text-[16px]">north_east</span></a></div><div><a class="text-on-surface-variant hover:text-on-surface flex items-center justify-between transition-colors py-0.5" href="https://linkedin.com" rel="noreferrer" target="_blank"><span>LinkedIn</span><span class="material-symbols-outlined text-[16px]">north_east</span></a></div><div><a class="text-on-surface-variant hover:text-on-surface flex items-center justify-between transition-colors py-0.5" data-path="contact" href="#"><span>Schedule Briefing</span><span class="material-symbols-outlined text-[16px]">north_east</span></a></div></div></div><div class="space-y-space-md"><span class="font-label-mono-sm text-label-mono-sm uppercase text-primary font-medium tracking-wider block">04 / Origin &amp; Base</span><div class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><p class="text-on-surface font-medium">Jabalpur, Madhya Pradesh, India</p><p>UTC+05:30 (IST Zone)</p><p class="mt-space-sm">Remote-first architecture, serving engineering teams globally.</p></div></div></div><div class="pt-space-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant"><p class="max-w-xl">Building scalable web solutions with clean architecture, modern technology and practical engineering.</p><p>© 2026 Aditya Kesharwani. All rights reserved.</p></div></div></footer></body></html>

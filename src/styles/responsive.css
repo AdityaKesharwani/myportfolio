@@ -1,0 +1,209 @@
+/* Responsive Design Rules */
+
+/* Prevent any horizontal overflow anywhere */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Touch-friendly target minimums for interactive elements */
+@media (pointer: coarse) {
+  .btn-atelier,
+  .nav-link-atelier,
+  button,
+  select,
+  input,
+  textarea {
+    min-height: 44px;
+  }
+}
+
+/* Mobile & Small Screen Reflows (<= 768px) */
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .stat-matrix-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .timeline-entry-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .timeline-entry-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .project-card-split {
+    flex-direction: column !important;
+  }
+
+  .project-card-split-reverse {
+    flex-direction: column !important;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cta-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Form row stacks to single column on mobile */
+  .form-row-2col {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Responsive image scaling */
+  .hero-portrait-frame {
+    height: 340px !important;
+  }
+
+  .hero-portrait-stage {
+    height: 380px !important;
+    min-height: 320px !important;
+  }
+
+  .project-img-frame {
+    height: 220px !important;
+  }
+
+  /* Ticker Marquee on Tablet & Mobile */
+  .ticker-marquee-wrapper::before,
+  .ticker-marquee-wrapper::after {
+    width: 38px !important;
+  }
+
+  .ticker-item {
+    padding: 0.75rem 1rem !important;
+    font-size: 0.8rem !important;
+    gap: 0.55rem !important;
+  }
+
+  .ticker-divider-line {
+    margin: 0 0.45rem !important;
+  }
+
+  /* 3D Testimonials Stage on Mobile */
+  .testimonials-3d-stage {
+    min-height: auto !important;
+    display: block !important;
+    perspective: none !important;
+  }
+
+  .testimonial-3d-card.card-prev,
+  .testimonial-3d-card.card-next,
+  .testimonial-3d-card.card-hidden {
+    display: none !important;
+  }
+
+  .testimonial-3d-card.card-active {
+    position: relative !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+
+  /* Budget options responsive styling */
+  .budget-btn {
+    padding: 0.5rem 0.25rem !important;
+  }
+}
+
+/* Ultra Mobile (<= 480px / 320px - 430px) */
+@media (max-width: 480px) {
+  .stat-matrix-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .btn-atelier {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-cta-group {
+    flex-direction: column !important;
+    width: 100%;
+  }
+
+  .budget-selector-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .display-xl {
+    font-size: 2.125rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .headline-lg {
+    font-size: 1.625rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .stat-counter {
+    font-size: 2.5rem !important;
+  }
+
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  /* Ticker Marquee on small screens */
+  .ticker-marquee-wrapper::before,
+  .ticker-marquee-wrapper::after {
+    width: 24px !important;
+  }
+
+  .ticker-item {
+    padding: 0.65rem 0.8rem !important;
+    font-size: 0.74rem !important;
+    gap: 0.45rem !important;
+  }
+
+  .ticker-metric-badge {
+    font-size: 0.72rem !important;
+    padding: 0.08rem 0.35rem !important;
+  }
+
+  /* Certificate and Modal tweaks */
+  .modal-dialog-custom {
+    padding: 0.75rem !important;
+  }
+}
+
+/* Smooth Touch Scrolling on all Tables */
+.table-responsive {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Large Screens (>= 1440px - 2560px) */
+@media (min-width: 1920px) {
+  .atelier-container {
+    max-width: 1680px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .atelier-container {
+    max-width: 2000px;
+  }
+
+  html {
+    font-size: 18px;
+  }
+}
+

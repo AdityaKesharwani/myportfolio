@@ -1,0 +1,277 @@
+@import './variables.css';
+@import './animations.css';
+
+/* Universal Reset & Architectural Foundations */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--surface);
+  color: var(--on-surface);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom Minimalist Architectural Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface-container-low);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--outline-variant);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--outline);
+}
+
+/* Text Selection */
+::selection {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
+
+/* Typography Utility Classes */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Heading Scales */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--on-surface);
+  letter-spacing: -0.025em;
+}
+
+.display-xl {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.headline-lg {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.headline-md {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.headline-sm {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.label-mono-sm {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.label-mono-md {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.stat-counter {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+/* Container Wrapper */
+.atelier-container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--margin-desktop);
+  padding-right: var(--margin-desktop);
+}
+
+@media (max-width: 1024px) {
+  .atelier-container {
+    padding-left: var(--margin-tablet);
+    padding-right: var(--margin-tablet);
+  }
+}
+
+@media (max-width: 640px) {
+  .atelier-container {
+    padding-left: var(--margin-mobile);
+    padding-right: var(--margin-mobile);
+  }
+}
+
+/* Base Architectural Link */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Buttons */
+.btn-atelier {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.625rem 1.5rem;
+  border-radius: var(--radius-sharp);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.btn-primary-atelier {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  border-color: var(--primary);
+}
+
+.btn-primary-atelier:hover {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--on-primary);
+}
+
+.btn-secondary-atelier {
+  background-color: var(--surface-container-lowest);
+  color: var(--primary);
+  border-color: var(--border-strong);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.bg-primary {
+  background-color: rgb(0, 0, 0) !important;
+}
+
+.btn-secondary-atelier:hover {
+  background-color: var(--surface-container);
+  color: var(--primary);
+  border-color: var(--outline);
+}
+
+.btn-dark-atelier {
+  background-color: var(--dark-surface-card);
+  color: #ffffff;
+  border-color: var(--dark-border);
+}
+
+.btn-dark-atelier:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+.btn-cyan-atelier {
+  background-color: var(--accent-cyan);
+  color: #000000;
+  border-color: var(--accent-cyan);
+  font-weight: 700;
+}
+
+.btn-cyan-atelier:hover {
+  background-color: var(--accent-cyan-light);
+  box-shadow: 0 0 20px var(--accent-cyan-glow);
+  color: #000000;
+}
+
+/* Badges */
+.badge-atelier {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.625rem;
+  background-color: var(--surface-container);
+  color: var(--on-surface);
+  border-radius: var(--radius-badge);
+  border: 1px solid var(--border-subtle);
+  font-weight: 500;
+}
+
+.badge-primary-atelier {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  border-color: var(--primary);
+}
+
+.badge-cyan-atelier {
+  background-color: rgba(34, 211, 238, 0.12);
+  color: var(--accent-cyan-dark);
+  border-color: rgba(34, 211, 238, 0.3);
+}
+
+/* Structural Grid Hairline Borders */
+.border-atelier {
+  border: 1px solid var(--border-subtle);
+}
+
+.border-atelier-strong {
+  border: 1px solid var(--border-strong);
+}
+
+/* Image containment */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
