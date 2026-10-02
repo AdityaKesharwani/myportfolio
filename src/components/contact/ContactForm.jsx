@@ -458,7 +458,7 @@ export default function ContactForm({
             <label className="label-mono-sm text-dark font-semibold">
               Project Investment Bracket <span className="text-danger">*</span>
             </label>
-            <div className="row g-2 budget-selector-grid">
+            <div className="row row-cols-2 row-cols-sm-3 row-cols-lg-5 g-2 budget-selector-grid">
               {budgetOptions.map((opt) => {
                 const isSelected = formData.budget === opt.id;
                 return (
@@ -550,10 +550,10 @@ export default function ContactForm({
             <button
               type="submit"
               disabled={isSubmitting}
-              className="btn-atelier btn-primary-atelier py-2 px-4 shrink-0 d-inline-flex align-items-center gap-2"
+              className="btn-atelier btn-primary-atelier py-2 px-4 shrink-0 d-inline-flex align-items-center justify-content-center gap-2 w-100 w-sm-auto"
             >
               <span>{isSubmitting ? 'Dispatching...' : 'Send Message'}</span>
-              <BsArrowRight size={14} />
+              <BsArrowRight size={14} className="shrink-0" />
             </button>
           </div>
         </form>

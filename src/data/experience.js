@@ -109,6 +109,30 @@ export const EDUCATION = [
 
 export const CERTIFICATIONS = [
   {
+    badge: 'AGENT',
+    title: 'Claude Code in Action',
+    issuer: 'Anthropic',
+    url: 'https://verify.skilljar.com/c/dmpkjy6ix2mn',
+  },
+  {
+    badge: 'CODE',
+    title: 'Claude Code 101',
+    issuer: 'Anthropic',
+    url: 'https://verify.skilljar.com/c/igw89jgzgnng',
+  },
+  {
+    badge: 'AI',
+    title: 'Claude 101',
+    issuer: 'Anthropic',
+    url: 'https://verify.skilljar.com/c/5diamiw4kv6u',
+  },
+  {
+    badge: 'COWRK',
+    title: 'Introduction to Claude Cowork',
+    issuer: 'Anthropic',
+    url: 'https://verify.skilljar.com/c/2xipqyjpvxma',
+  },
+  {
     badge: 'GA',
     title: 'Google Analytics Certification',
     issuer: 'Great Learning Academy',

@@ -12,7 +12,10 @@ export default function ArchitectureSection() {
             <span className="label-mono-sm text-secondary font-semibold d-block">04 // LEDGER INDEX</span>
             <h2 className="headline-lg text-dark text-uppercase m-0">System Implementation Audit</h2>
           </div>
-          <span className="label-mono-sm text-muted">TOTAL PROJECTS DOCUMENTED: 04</span>
+          <div className="d-flex align-items-center gap-2">
+            <span className="badge-atelier font-mono">JOURNEY: 5.5+ YEARS</span>
+            <span className="label-mono-sm text-muted">TOTAL PROJECTS DOCUMENTED: {String(PROJECTS.length).padStart(2, '0')}</span>
+          </div>
         </div>
 
         {/* Tabular Records */}

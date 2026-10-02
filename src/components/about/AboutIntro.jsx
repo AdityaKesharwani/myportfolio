@@ -32,14 +32,14 @@ export default function AboutIntro() {
         <Container>
           {/* Status Meta Bar */}
           <div className="d-flex flex-wrap align-items-center justify-content-between gap-2 pb-3 mb-4 border-bottom border-atelier font-mono" style={{ fontSize: '0.75rem' }}>
-            <div className="d-flex align-items-center gap-2">
-              <span style={{ width: '8px', height: '8px', backgroundColor: 'var(--primary)' }}></span>
+            <div className="d-flex align-items-center gap-2" style={{ wordBreak: 'break-word' }}>
+              <span className="shrink-0" style={{ width: '8px', height: '8px', backgroundColor: 'var(--primary)' }}></span>
               <span className="text-muted text-uppercase tracking-wider">
                 DOSSIER // EXP_REF_2026 // {PERSONAL_INFO.name.toUpperCase()}
               </span>
             </div>
 
-            <div className="d-flex align-items-center gap-2">
+            <div className="d-flex flex-wrap align-items-center gap-1.5">
               <span className="badge-atelier">SYS STATUS: PRODUCTION READY</span>
               <span className="badge-atelier badge-primary-atelier">LOC: {PERSONAL_INFO.timezone}</span>
             </div>
@@ -64,7 +64,7 @@ export default function AboutIntro() {
 
             {/* Metric Counter / Spec Inset */}
             <div className="col-12 col-lg-4">
-              <div className="p-4 bg-white border-atelier shadow-sm d-flex flex-column justify-content-between h-100 gap-3 tilt-card">
+              <div className="p-3 p-sm-4 bg-white border-atelier shadow-sm d-flex flex-column justify-content-between h-100 gap-3 tilt-card">
                 <div className="d-flex align-items-center justify-content-between pb-2 border-bottom border-atelier font-mono layer-float-sm">
                   <span className="label-mono-sm text-secondary">SPEC // ARCHITECTURE SUMMARY</span>
                   <BsTerminal size={18} className="text-dark" />

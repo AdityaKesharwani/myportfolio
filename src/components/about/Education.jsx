@@ -4,10 +4,10 @@ import { BsMortarboard, BsCheckCircle } from 'react-icons/bs';
 
 export default function Education() {
   return (
-    <div className="p-4 bg-white border-atelier shadow-sm h-100 d-flex flex-column justify-content-between">
+    <div className="p-3 p-sm-4 bg-white border-atelier shadow-sm h-100 d-flex flex-column justify-content-between">
       <div>
         <div
-          className="d-flex align-items-center justify-content-between p-3 border-atelier -mx-4 -mt-4 mb-4"
+          className="d-flex align-items-center justify-content-between p-3 border-atelier mb-4"
           style={{ backgroundColor: 'var(--surface-container-low)' }}
         >
           <div className="d-flex align-items-center gap-2">
@@ -27,7 +27,7 @@ export default function Education() {
               style={{ backgroundColor: 'var(--surface-container-low)' }}
             >
               <div className="d-flex flex-wrap align-items-center justify-content-between gap-1">
-                <span className="headline-sm text-dark font-bold" style={{ fontSize: '0.9375rem' }}>
+                <span className="headline-sm text-dark font-bold" style={{ fontSize: '0.9375rem', wordBreak: 'break-word' }}>
                   {edu.degree}
                 </span>
                 <span
@@ -41,7 +41,7 @@ export default function Education() {
                   {edu.status}
                 </span>
               </div>
-              <span className="label-mono-md text-secondary font-medium">
+              <span className="label-mono-md text-secondary font-medium" style={{ wordBreak: 'break-word' }}>
                 Specialization: {edu.specialization}
               </span>
               <p className="font-body text-muted m-0 mt-1" style={{ fontSize: '0.8125rem' }}>
@@ -52,7 +52,7 @@ export default function Education() {
         </div>
       </div>
 
-      <div className="mt-4 pt-3 border-top border-atelier d-flex align-items-center justify-content-between font-mono" style={{ fontSize: '0.75rem', color: 'var(--on-surface-variant)' }}>
+      <div className="mt-4 pt-3 border-top border-atelier d-flex flex-wrap align-items-center justify-content-between gap-2 font-mono" style={{ fontSize: '0.75rem', color: 'var(--on-surface-variant)' }}>
         <span>RGPV / RDVV AFFILIATED</span>
         <span className="d-flex align-items-center gap-1 text-dark font-medium">
           <BsCheckCircle size={13} className="text-dark" /> DEGREE RECORD VERIFIED

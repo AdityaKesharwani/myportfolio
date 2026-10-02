@@ -6,7 +6,7 @@ export default function ProjectCard({ project, index }) {
 
   return (
     <article
-      className="p-4 p-md-5 bg-white border-atelier shadow-sm d-flex flex-column gap-4 tilt-card"
+      className="p-3 p-sm-4 p-md-5 bg-white border-atelier shadow-sm d-flex flex-column gap-4 tilt-card"
     >
       <div
         className={`row g-4 align-items-stretch ${
@@ -16,8 +16,8 @@ export default function ProjectCard({ project, index }) {
         {/* Project Meta & Narrative (6 cols on lg) */}
         <div className="col-12 col-lg-6 d-flex flex-column justify-content-between gap-3">
           <div className="d-flex flex-column gap-2">
-            <div className="d-flex align-items-center justify-content-between pb-1 border-bottom border-atelier">
-              <span className="label-mono-sm text-secondary font-semibold">
+            <div className="d-flex flex-wrap align-items-center justify-content-between gap-2 pb-1 border-bottom border-atelier">
+              <span className="label-mono-sm text-secondary font-semibold" style={{ wordBreak: 'break-word' }}>
                 [{project.code}] // {project.archive}
               </span>
               <span className="badge-atelier font-mono">
@@ -25,11 +25,11 @@ export default function ProjectCard({ project, index }) {
               </span>
             </div>
 
-            <h3 className="display-xl text-uppercase tracking-tight text-dark m-0" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.25rem)' }}>
+            <h3 className="display-xl text-uppercase tracking-tight text-dark m-0" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.25rem)', wordBreak: 'break-word' }}>
               {project.title}
             </h3>
 
-            <p className="label-mono-sm text-secondary m-0">
+            <p className="label-mono-sm text-secondary m-0" style={{ wordBreak: 'break-word' }}>
               {project.subtitle}
             </p>
 
@@ -52,15 +52,15 @@ export default function ProjectCard({ project, index }) {
               </div>
             </div>
 
-            <div className="d-flex flex-wrap align-items-center justify-content-between gap-2 pt-3 border-top border-atelier font-mono" style={{ fontSize: '0.75rem' }}>
-              <span className="text-secondary">STACK: {project.stack}</span>
-              <div className="d-flex align-items-center gap-2">
+            <div className="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-2.5 pt-3 border-top border-atelier font-mono" style={{ fontSize: '0.75rem' }}>
+              <span className="text-secondary" style={{ wordBreak: 'break-word' }}>STACK: {project.stack}</span>
+              <div className="d-flex align-items-center gap-2 w-100 w-sm-auto">
                 {project.liveUrl && (
                   <a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-atelier btn-primary-atelier py-1.5 px-3 text-decoration-none d-inline-flex align-items-center gap-1.5"
+                    className="btn-atelier btn-primary-atelier py-1.5 px-3 text-decoration-none d-inline-flex align-items-center justify-content-center gap-1.5 w-100 w-sm-auto"
                     style={{ fontSize: '0.75rem', letterSpacing: '0.04em' }}
                   >
                     <span>View Live Project</span>

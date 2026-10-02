@@ -5,10 +5,10 @@ import { BsAward, BsArrowUpRight, BsCheckCircleFill } from 'react-icons/bs';
 
 export default function Certifications() {
   return (
-    <div className="p-4 bg-white border-atelier shadow-sm h-100 d-flex flex-column justify-content-between">
+    <div className="p-3 p-sm-4 bg-white border-atelier shadow-sm h-100 d-flex flex-column justify-content-between">
       <div>
         <div
-          className="d-flex align-items-center justify-content-between p-3 border-atelier -mx-4 -mt-4 mb-4"
+          className="d-flex align-items-center justify-content-between p-3 border-atelier mb-4"
           style={{ backgroundColor: 'var(--surface-container-low)' }}
         >
           <div className="d-flex align-items-center gap-2">
@@ -30,7 +30,7 @@ export default function Certifications() {
                   transition: 'background-color 0.2s ease, border-color 0.2s ease',
                 }}
               >
-                <div className="d-flex align-items-center gap-3">
+                <div className="d-flex align-items-center gap-3" style={{ minWidth: 0 }}>
                   <div
                     className="d-flex align-items-center justify-content-center font-mono font-bold shrink-0"
                     style={{
@@ -43,7 +43,7 @@ export default function Certifications() {
                   >
                     {cert.badge}
                   </div>
-                  <div>
+                  <div style={{ minWidth: 0, wordBreak: 'break-word' }}>
                     <h4 className="headline-sm text-dark m-0" style={{ fontSize: '0.9375rem', fontWeight: 600 }}>
                       {cert.title}
                     </h4>

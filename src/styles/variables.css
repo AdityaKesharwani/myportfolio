@@ -70,8 +70,8 @@
 
   /* Layout Spacing */
   --margin-desktop: 4rem;
-  --margin-tablet: 2.5rem;
-  --margin-mobile: 1.25rem;
+  --margin-tablet: 2rem;
+  --margin-mobile: 1rem;
 
   --gutter-desktop: 2rem;
   --gutter-tablet: 1.5rem;

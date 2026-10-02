@@ -5,6 +5,7 @@ import ProjectGrid from '../components/projects/ProjectGrid';
 import ArchitectureSection from '../components/projects/ArchitectureSection';
 import { SKILL_DOMAINS } from '../data/skills';
 import { PERSONAL_INFO } from '../utils/constants';
+import { PROJECTS } from '../data/projects';
 import Button from '../components/common/Button';
 import { BsLayers, BsDatabase, BsDiagram3, BsShield, BsCart, BsCloudCheck, BsSend } from 'react-icons/bs';
 
@@ -30,10 +31,10 @@ export default function Projects() {
   return (
     <>
       <Helmet>
-        <title>Projects &amp; Technical Index | {PERSONAL_INFO.name}</title>
+        <title>Projects &amp; Technical Index | 5.5+ Years Journey | {PERSONAL_INFO.name}</title>
         <meta
           name="description"
-          content="Systematic inventory of core competencies, microservice architectures, enterprise-scale backends, and full-stack software deployments authored by Aditya Kesharwani."
+          content={`Systematic inventory of ${PROJECTS.length}+ production architectures, enterprise ERPs, e-commerce platforms, and full-stack software deployments delivered across 5.5+ years journey by ${PERSONAL_INFO.name}.`}
         />
       </Helmet>
 
@@ -42,10 +43,10 @@ export default function Projects() {
         <Container>
           <div className="d-flex flex-column flex-md-row align-items-start align-items-md-end justify-content-between gap-3 pb-3 mb-3 border-bottom border-atelier">
             <div>
-              <div className="d-flex align-items-center gap-2 font-mono">
-                <span style={{ width: '8px', height: '8px', backgroundColor: 'var(--primary)' }}></span>
+              <div className="d-flex align-items-center gap-2 font-mono flex-wrap">
+                <span style={{ width: '8px', height: '8px', backgroundColor: 'var(--primary)', flexShrink: 0 }}></span>
                 <span className="label-mono-sm text-secondary font-semibold">
-                  ARCHITECTURAL REGISTRY // VOL. 04
+                  INDEX // 5.5+ YEARS ENGINEERING JOURNEY // {PERSONAL_INFO.name.toUpperCase()}
                 </span>
               </div>
               <h1 className="display-xl text-dark text-uppercase m-0 mt-1">
@@ -53,56 +54,58 @@ export default function Projects() {
               </h1>
             </div>
 
-            <div className="d-flex align-items-center gap-2 font-mono" style={{ fontSize: '0.75rem' }}>
-              <span className="badge-atelier badge-primary-atelier">STATUS: OPERATIONAL</span>
-              <span className="badge-atelier">UPDATED: Q1 // {PERSONAL_INFO.releaseYear}</span>
+            <div className="d-flex flex-wrap align-items-center gap-2 font-mono" style={{ fontSize: '0.75rem' }}>
+              <span className="badge-atelier">JOURNEY: 5.5+ YEARS</span>
+              <span className="badge-atelier badge-primary-atelier">
+                {PROJECTS.length} PRODUCTION SYSTEMS ARCHIVED
+              </span>
             </div>
           </div>
 
-          <p className="font-body text-muted m-0" style={{ maxWidth: '800px', fontSize: '1.05rem', lineHeight: 1.65 }}>
-            Systematic inventory of core competencies, microservice architectures, enterprise-scale backends, and full-stack software deployments authored by Aditya Kesharwani.
+          <p className="font-body text-muted m-0" style={{ maxWidth: '840px', fontSize: '1.05rem', lineHeight: 1.65 }}>
+            An authenticated portfolio of <strong>{PROJECTS.length} production systems</strong> delivered across a <strong>5.5+ years software engineering journey</strong>. Encompassing enterprise Real Estate ERPs, high-throughput retail e-commerce (P.C. Richard &amp; Son), automated ADA accessibility compliance tools (VACT), cross-platform Flutter mobile applications, and resilient Laravel &amp; React full-stack architectures.
           </p>
 
           {/* Quick Metrics Ribbon from new theme */}
           <div className="row g-2 pt-4">
             <div className="col-6 col-lg-3">
               <div className="p-3 bg-white border-atelier shadow-sm h-100 d-flex flex-column justify-content-between tilt-card">
-                <span className="font-mono text-muted text-uppercase text-xs">Payroll Variance</span>
+                <span className="font-mono text-muted text-uppercase text-xs">Engineering Journey</span>
                 <div className="d-flex align-items-baseline gap-1 my-1">
-                  <span className="font-display fw-bold text-dark" style={{ fontSize: '2rem' }}>-40%</span>
-                  <span className="font-mono text-muted text-xs">Error Rate</span>
+                  <span className="font-display fw-bold text-dark" style={{ fontSize: '2rem' }}>5.5+</span>
+                  <span className="font-mono text-muted text-xs">Years</span>
                 </div>
-                <span className="font-mono text-muted text-xs">White Force Automation</span>
+                <span className="font-mono text-muted text-xs">Professional Full-Stack Delivery</span>
               </div>
             </div>
             <div className="col-6 col-lg-3">
               <div className="p-3 bg-white border-atelier shadow-sm h-100 d-flex flex-column justify-content-between tilt-card">
-                <span className="font-mono text-muted text-uppercase text-xs">Runtime Overhead</span>
+                <span className="font-mono text-muted text-uppercase text-xs">Delivered Systems</span>
                 <div className="d-flex align-items-baseline gap-1 my-1">
-                  <span className="font-display fw-bold text-dark" style={{ fontSize: '2rem' }}>+30%</span>
-                  <span className="font-mono text-muted text-xs">Throughput</span>
+                  <span className="font-display fw-bold text-dark" style={{ fontSize: '2rem' }}>{PROJECTS.length}+</span>
+                  <span className="font-mono text-muted text-xs">Projects</span>
                 </div>
-                <span className="font-mono text-muted text-xs">Query Index Optimization</span>
+                <span className="font-mono text-muted text-xs">ERP, E-Commerce &amp; Web Apps</span>
               </div>
             </div>
             <div className="col-6 col-lg-3">
               <div className="p-3 bg-white border-atelier shadow-sm h-100 d-flex flex-column justify-content-between tilt-card">
-                <span className="font-mono text-muted text-uppercase text-xs">Sync Pipeline</span>
+                <span className="font-mono text-muted text-uppercase text-xs">Integrations &amp; APIs</span>
                 <div className="d-flex align-items-baseline gap-1 my-1">
                   <span className="font-display fw-bold text-dark" style={{ fontSize: '2rem' }}>16+</span>
                   <span className="font-mono text-muted text-xs">Portals</span>
                 </div>
-                <span className="font-mono text-muted text-xs">Unified HRMS Ingestion</span>
+                <span className="font-mono text-muted text-xs">Payment Gateways &amp; Multi-Store</span>
               </div>
             </div>
             <div className="col-6 col-lg-3">
               <div className="p-3 bg-white border-atelier shadow-sm h-100 d-flex flex-column justify-content-between tilt-card">
-                <span className="font-mono text-muted text-uppercase text-xs">Incident Reduction</span>
+                <span className="font-mono text-muted text-uppercase text-xs">Production Rollouts</span>
                 <div className="d-flex align-items-baseline gap-1 my-1">
-                  <span className="font-display fw-bold text-dark" style={{ fontSize: '2rem' }}>-30%</span>
-                  <span className="font-mono text-muted text-xs">Defects</span>
+                  <span className="font-display fw-bold text-dark" style={{ fontSize: '2rem' }}>100%</span>
+                  <span className="font-mono text-muted text-xs">Live</span>
                 </div>
-                <span className="font-mono text-muted text-xs">Production Rollouts</span>
+                <span className="font-mono text-muted text-xs">Zero-Downtime Releases</span>
               </div>
             </div>
           </div>

@@ -5,16 +5,18 @@ import Container from '../common/Container';
 import { BsArrowRight, BsBoxArrowUpRight } from 'react-icons/bs';
 
 export default function FeaturedProjects() {
+  const featuredProjects = PROJECTS.filter((proj) => proj.featured);
+
   return (
     <section className="w-100 py-5 bg-surface border-bottom border-atelier" id="projects">
       <Container>
         {/* Section Header */}
         <div className="d-flex flex-column flex-md-row align-items-start align-items-md-end justify-content-between p-3 p-md-4 mb-4 border-atelier bg-white shadow-sm gap-3">
           <div className="d-flex flex-column gap-1">
-            <div className="d-flex align-items-center gap-2 font-mono">
+            <div className="d-flex align-items-center gap-2 font-mono flex-wrap">
               <span className="label-mono-sm text-secondary font-semibold">02 // INDEX</span>
               <span style={{ width: '32px', height: '1px', backgroundColor: 'var(--border-strong)' }}></span>
-              <span className="label-mono-sm text-dark font-semibold">SELECTED PROJECTS</span>
+              <span className="label-mono-sm text-dark font-semibold">SELECTED PROJECTS ({featuredProjects.length} OF {PROJECTS.length}+)</span>
             </div>
             <h2 className="headline-lg text-uppercase tracking-tight text-dark m-0">
               A Selection of My Work
@@ -28,7 +30,7 @@ export default function FeaturedProjects() {
 
         {/* 2x2 Showcase Grid */}
         <div className="row g-4 projects-grid">
-          {PROJECTS.map((proj) => (
+          {featuredProjects.map((proj) => (
             <div key={proj.id} className="col-12 col-md-6">
               <article
                 className="p-4 bg-white border-atelier shadow-sm h-100 d-flex flex-column justify-content-between gap-3 tilt-card"
@@ -179,10 +181,11 @@ export default function FeaturedProjects() {
         <div className="text-center pt-4 mt-2">
           <Link
             to="/projects"
-            className="btn-atelier btn-secondary-atelier py-2 px-4"
+            className="btn-atelier btn-secondary-atelier py-2.5 px-3 px-sm-4 d-inline-flex align-items-center justify-content-center gap-2"
+            style={{ whiteSpace: 'normal', maxWidth: '100%', textAlign: 'center' }}
           >
-            <span>Explore All Projects &amp; Implementation Audit</span>
-            <BsArrowRight size={14} />
+            <span>Explore All {PROJECTS.length}+ Projects Across 5.5+ Years Engineering Journey</span>
+            <BsArrowRight size={14} className="shrink-0" />
           </Link>
         </div>
       </Container>

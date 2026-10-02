@@ -9,10 +9,15 @@ export default function ProjectGrid() {
 
   const filteredProjects = useMemo(() => {
     if (filter === 'all') return PROJECTS;
+    const q = filter.toLowerCase();
     return PROJECTS.filter(
       (p) =>
-        p.category.toLowerCase().includes(filter.toLowerCase()) ||
-        p.stack.toLowerCase().includes(filter.toLowerCase())
+        p.category.toLowerCase().includes(q) ||
+        p.type.toLowerCase().includes(q) ||
+        p.stack.toLowerCase().includes(q) ||
+        p.engine.toLowerCase().includes(q) ||
+        p.domainScope.toLowerCase().includes(q) ||
+        p.tags.some((t) => t.toLowerCase().includes(q))
     );
   }, [filter]);
 
@@ -21,6 +26,26 @@ export default function ProjectGrid() {
       <Container>
         {/* Filter Bar */}
         <ProjectFilter activeFilter={filter} onSelectFilter={setFilter} />
+
+        {/* Counter & Registry Status Header */}
+        <div
+          className="d-flex flex-wrap align-items-center justify-content-between gap-2 pb-3 mb-4 border-bottom border-atelier font-mono"
+          style={{ fontSize: '0.75rem' }}
+        >
+          <div className="d-flex align-items-center gap-2 flex-wrap">
+            <span style={{ width: '6px', height: '6px', backgroundColor: 'var(--primary)', flexShrink: 0 }}></span>
+            <span className="text-secondary font-semibold">
+              INDEX // {filteredProjects.length} OF {PROJECTS.length} PRODUCTION PROJECTS LOADED
+            </span>
+          </div>
+
+          <div className="d-flex align-items-center gap-2">
+            <span className="badge-atelier">JOURNEY: 5.5+ YEARS</span>
+            <span className="badge-atelier badge-primary-atelier">
+              AUDITED PRODUCTION REPO
+            </span>
+          </div>
+        </div>
 
         {/* Project Cards Stack */}
         <div className="d-flex flex-column gap-5">

@@ -46,9 +46,9 @@ export default function ExperienceStats() {
         <div className="row g-4">
           {/* Card 1: Payroll Calculation */}
           <div className="col-12 col-lg-4">
-            <div className="p-4 bg-white border-atelier shadow-sm h-100 d-flex flex-column justify-content-between gap-3">
+            <div className="p-3 p-sm-4 bg-white border-atelier shadow-sm h-100 d-flex flex-column justify-content-between gap-3">
               <div>
-                <div className="d-flex justify-content-between align-items-center font-mono text-muted" style={{ fontSize: '0.6875rem' }}>
+                <div className="d-flex flex-wrap justify-content-between align-items-center gap-1 font-mono text-muted" style={{ fontSize: '0.6875rem' }}>
                   <span>METRIC // PR_01</span>
                   <span>PAYROLL ACCURACY</span>
                 </div>
@@ -60,9 +60,9 @@ export default function ExperienceStats() {
                 </p>
               </div>
 
-              <div className="d-flex align-items-center justify-content-between py-3">
+              <div className="d-flex align-items-center justify-content-between gap-2 py-3">
                 <div>
-                  <span className="stat-counter text-dark d-block" style={{ fontSize: '2.75rem' }}>
+                  <span className="stat-counter text-dark d-block" style={{ fontSize: 'clamp(2rem, 6vw, 2.75rem)' }}>
                     -40%
                   </span>
                   <span className="label-mono-sm text-secondary d-block mt-1">Manual Intervention Rate</span>
@@ -94,9 +94,9 @@ export default function ExperienceStats() {
 
           {/* Card 2: Database Query Latency */}
           <div className="col-12 col-lg-4">
-            <div className="p-4 bg-white border-atelier shadow-sm h-100 d-flex flex-column justify-content-between gap-3">
+            <div className="p-3 p-sm-4 bg-white border-atelier shadow-sm h-100 d-flex flex-column justify-content-between gap-3">
               <div>
-                <div className="d-flex justify-content-between align-items-center font-mono text-muted" style={{ fontSize: '0.6875rem' }}>
+                <div className="d-flex flex-wrap justify-content-between align-items-center gap-1 font-mono text-muted" style={{ fontSize: '0.6875rem' }}>
                   <span>METRIC // DB_02</span>
                   <span>QUERY LATENCY</span>
                 </div>
@@ -108,9 +108,9 @@ export default function ExperienceStats() {
                 </p>
               </div>
 
-              <div className="d-flex align-items-center justify-content-between py-3">
+              <div className="d-flex align-items-center justify-content-between gap-2 py-3">
                 <div>
-                  <span className="stat-counter text-dark d-block" style={{ fontSize: '2.75rem' }}>
+                  <span className="stat-counter text-dark d-block" style={{ fontSize: 'clamp(2rem, 6vw, 2.75rem)' }}>
                     25-30%
                   </span>
                   <span className="label-mono-sm text-secondary d-block mt-1">Response Time Reduction</span>
@@ -133,9 +133,9 @@ export default function ExperienceStats() {
 
           {/* Card 3: Defect Rate Mitigation */}
           <div className="col-12 col-lg-4">
-            <div className="p-4 bg-white border-atelier shadow-sm h-100 d-flex flex-column justify-content-between gap-3">
+            <div className="p-3 p-sm-4 bg-white border-atelier shadow-sm h-100 d-flex flex-column justify-content-between gap-3">
               <div>
-                <div className="d-flex justify-content-between align-items-center font-mono text-muted" style={{ fontSize: '0.6875rem' }}>
+                <div className="d-flex flex-wrap justify-content-between align-items-center gap-1 font-mono text-muted" style={{ fontSize: '0.6875rem' }}>
                   <span>METRIC // REL_03</span>
                   <span>DEFECT RATE</span>
                 </div>
@@ -147,9 +147,9 @@ export default function ExperienceStats() {
                 </p>
               </div>
 
-              <div className="d-flex align-items-center justify-content-between py-3">
+              <div className="d-flex align-items-center justify-content-between gap-2 py-3">
                 <div>
-                  <span className="stat-counter text-dark d-block" style={{ fontSize: '2.75rem' }}>
+                  <span className="stat-counter text-dark d-block" style={{ fontSize: 'clamp(2rem, 6vw, 2.75rem)' }}>
                     -30%
                   </span>
                   <span className="label-mono-sm text-secondary d-block mt-1">Post-Release Incidents</span>

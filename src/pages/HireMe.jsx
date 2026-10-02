@@ -65,12 +65,12 @@ export default function HireMe() {
         <div className="atelier-container position-relative" style={{ zIndex: 2 }}>
           {/* Top Cyber Breadcrumb */}
           <div
-            className="d-flex flex-wrap align-items-center justify-content-between gap-3 pb-3 mb-4 font-mono text-xs"
+            className="d-flex flex-wrap align-items-center justify-content-between gap-2 pb-3 mb-4 font-mono text-xs"
             style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}
           >
-            <div className="d-flex align-items-center gap-2" style={{ color: '#94a3b8' }}>
+            <div className="d-flex align-items-center gap-2 flex-wrap" style={{ color: '#94a3b8' }}>
               <span
-                className="d-inline-block rounded-1"
+                className="d-inline-block rounded-1 shrink-0"
                 style={{
                   width: '8px',
                   height: '8px',
@@ -78,8 +78,8 @@ export default function HireMe() {
                   animation: 'pulseGlowCyan 2s infinite',
                 }}
               ></span>
-              <span className="text-uppercase tracking-wider">
-                Commission Register &amp; Dossier / 2026.04
+              <span className="text-uppercase tracking-wider" style={{ wordBreak: 'break-word' }}>
+                Commission Register // 2026.04
               </span>
               <span style={{ color: 'rgba(255, 255, 255, 0.2)' }}>|</span>
               <span className="fw-semibold" style={{ color: '#fde68a' }}>
@@ -87,7 +87,7 @@ export default function HireMe() {
               </span>
             </div>
 
-            <div className="d-flex align-items-center gap-3 font-mono">
+            <div className="d-flex align-items-center gap-2 gap-sm-3 font-mono flex-wrap">
               <span className="d-none d-sm-inline" style={{ color: '#94a3b8' }}>
                 [NODE_JBP_IN] UTC+05:30
               </span>
@@ -97,10 +97,11 @@ export default function HireMe() {
                   backgroundColor: 'rgba(255, 255, 255, 0.05)',
                   borderColor: 'rgba(255, 255, 255, 0.15)',
                   color: '#6ee7b7',
+                  fontSize: '0.7rem',
                 }}
               >
                 <span
-                  className="pulse-glow-green rounded-circle d-inline-block"
+                  className="pulse-glow-green rounded-circle d-inline-block shrink-0"
                   style={{ width: '6px', height: '6px', backgroundColor: '#34d399' }}
                 ></span>
                 ACTIVE BOOKING WINDOW
@@ -234,10 +235,10 @@ export default function HireMe() {
               </div>
 
               {/* Quick CTA Action Bar */}
-              <div className="d-flex flex-wrap align-items-center gap-3 pt-2">
+              <div className="d-flex flex-wrap align-items-center gap-2 gap-sm-3 pt-2 hero-cta-group">
                 <a
                   href="#services"
-                  className="btn-atelier btn-primary-atelier text-decoration-none font-mono text-uppercase px-4 py-2 d-inline-flex align-items-center gap-2 fw-semibold"
+                  className="btn-atelier btn-primary-atelier text-decoration-none font-mono text-uppercase px-3 px-sm-4 py-2 d-inline-flex align-items-center justify-content-center gap-2 fw-semibold"
                   style={{
                     backgroundColor: '#ffffff',
                     color: '#000000',
@@ -247,7 +248,7 @@ export default function HireMe() {
                   }}
                 >
                   <span>Explore Capabilities</span>
-                  <BsArrowDown size={14} />
+                  <BsArrowDown size={14} className="shrink-0" />
                 </a>
 
                 <a
@@ -259,8 +260,8 @@ export default function HireMe() {
                     color: '#ffffff',
                   }}
                 >
-                  <BsEnvelope size={14} style={{ color: 'var(--accent-cyan)' }} />
-                  <span>{PERSONAL_INFO.email}</span>
+                  <BsEnvelope size={14} style={{ color: 'var(--accent-cyan)', flexShrink: 0 }} />
+                  <span>Email: {PERSONAL_INFO.email}</span>
                 </a>
               </div>
             </div>

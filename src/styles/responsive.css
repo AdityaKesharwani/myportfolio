@@ -1,9 +1,43 @@
-/* Responsive Design Rules */
+/* ==========================================================================
+   Architectural Tech Atelier - Advanced Mobile Responsive System
+   Targeted for iPhone 16 Pro (393px–402px), Ultra-Mobile, Tablets & Desktops
+   ========================================================================== */
 
-/* Prevent any horizontal overflow anywhere */
-html, body {
+/* Prevent accidental horizontal overflow globally */
+html,
+body {
   max-width: 100vw;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* iOS Safe Area Inset Support */
+body {
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+/* Global text wrapping defense to eliminate text overlap */
+h1, h2, h3, h4, h5, h6,
+p, span, a, label, li, dt, dd, th, td {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Base utility for flexible card action button pairs */
+.card-actions-row {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.card-actions-row > * {
+  flex: 1 1 110px;
+  min-width: 0;
+  text-align: center;
 }
 
 /* Touch-friendly target minimums for interactive elements */
@@ -14,86 +48,122 @@ html, body {
   select,
   input,
   textarea {
-    min-height: 44px;
+    min-height: 42px;
   }
 }
 
-/* Mobile & Small Screen Reflows (<= 768px) */
-@media (max-width: 768px) {
-  .hero-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .stat-matrix-grid {
-    grid-template-columns: 1fr 1fr !important;
+/* ==========================================================================
+   Tablet & Medium Screens (<= 992px)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .atelier-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .timeline-entry-header {
     flex-direction: column !important;
     align-items: flex-start !important;
+    gap: 0.75rem !important;
+  }
+}
+
+/* ==========================================================================
+   Mobile & Small Screen Reflows (<= 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .atelier-container {
+    padding-left: var(--margin-mobile, 1rem);
+    padding-right: var(--margin-mobile, 1rem);
   }
 
-  .timeline-entry-grid {
-    grid-template-columns: 1fr !important;
+  /* Typography Scales for Mobile */
+  .display-xl {
+    font-size: 2.125rem !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.03em !important;
   }
 
-  .project-card-split {
-    flex-direction: column !important;
+  .headline-lg {
+    font-size: 1.625rem !important;
+    line-height: 1.2 !important;
   }
 
-  .project-card-split-reverse {
-    flex-direction: column !important;
+  .headline-md {
+    font-size: 1.2rem !important;
+    line-height: 1.3 !important;
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr !important;
+  .stat-counter {
+    font-size: 2.25rem !important;
+    line-height: 1.05 !important;
   }
 
-  .contact-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .cta-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .footer-columns {
-    grid-template-columns: 1fr !important;
-  }
-
-  /* Form row stacks to single column on mobile */
+  /* Grid fallbacks for mobile layouts */
+  .hero-grid,
+  .timeline-entry-grid,
+  .projects-grid,
+  .contact-grid,
+  .cta-grid,
+  .footer-columns,
   .form-row-2col {
     grid-template-columns: 1fr !important;
   }
 
-  /* Responsive image scaling */
-  .hero-portrait-frame {
-    height: 340px !important;
+  /* Hero portrait stage with calibrated height & spec sheet overlay */
+  .hero-portrait-stage {
+    height: 480px !important;
+    min-height: 420px !important;
   }
 
-  .hero-portrait-stage {
-    height: 380px !important;
-    min-height: 320px !important;
+  .hero-portrait-stage img {
+    object-position: center 8% !important;
+  }
+
+  .hero-spec-card {
+    padding: 8px 10px !important;
+    bottom: 8px !important;
+    left: 8px !important;
+    right: 8px !important;
+    gap: 0.35rem !important;
+  }
+
+  .hero-spec-card .row {
+    row-gap: 2px !important;
+  }
+
+  /* Budget options grid reflow (clean 2-column grid on mobile) */
+  .budget-selector-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+
+  .budget-selector-grid > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    padding: 0 !important;
   }
 
   .project-img-frame {
-    height: 220px !important;
+    height: 200px !important;
   }
 
-  /* Ticker Marquee on Tablet & Mobile */
+  /* Ticker Marquee on Mobile */
   .ticker-marquee-wrapper::before,
   .ticker-marquee-wrapper::after {
-    width: 38px !important;
+    width: 32px !important;
   }
 
   .ticker-item {
-    padding: 0.75rem 1rem !important;
-    font-size: 0.8rem !important;
-    gap: 0.55rem !important;
+    padding: 0.65rem 0.85rem !important;
+    font-size: 0.76rem !important;
+    gap: 0.5rem !important;
   }
 
   .ticker-divider-line {
-    margin: 0 0.45rem !important;
+    margin: 0 0.4rem !important;
   }
 
   /* 3D Testimonials Stage on Mobile */
@@ -117,80 +187,160 @@ html, body {
     filter: none !important;
     opacity: 1 !important;
   }
-
-  /* Budget options responsive styling */
-  .budget-btn {
-    padding: 0.5rem 0.25rem !important;
-  }
 }
 
-/* Ultra Mobile (<= 480px / 320px - 430px) */
+/* ==========================================================================
+   iPhone 16 Pro & Ultra Mobile Screens (<= 480px / 360px - 430px)
+   ========================================================================== */
 @media (max-width: 480px) {
-  .stat-matrix-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .btn-atelier {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .hero-cta-group {
-    flex-direction: column !important;
-    width: 100%;
-  }
-
-  .budget-selector-grid {
-    grid-template-columns: 1fr 1fr !important;
-  }
-
+  /* Ultra-sharp headline scaling to prevent text clipping/overflow */
   .display-xl {
-    font-size: 2.125rem !important;
-    line-height: 1.1 !important;
+    font-size: 1.85rem !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.025em !important;
   }
 
   .headline-lg {
-    font-size: 1.625rem !important;
-    line-height: 1.2 !important;
+    font-size: 1.35rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .headline-md {
+    font-size: 1.1rem !important;
+    line-height: 1.35 !important;
   }
 
   .stat-counter {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
+    line-height: 1 !important;
   }
 
-  .hide-on-mobile {
-    display: none !important;
+  /* Hero portrait stage on iPhone */
+  .hero-portrait-stage {
+    height: 440px !important;
+    min-height: 380px !important;
   }
 
-  /* Ticker Marquee on small screens */
+  .hero-portrait-stage img {
+    object-position: center 6% !important;
+  }
+
+  .hero-spec-card {
+    padding: 6px 8px !important;
+    bottom: 6px !important;
+    left: 6px !important;
+    right: 6px !important;
+    gap: 0.25rem !important;
+  }
+
+  .hero-spec-card .row {
+    row-gap: 2px !important;
+  }
+
+  .hero-spec-card .col-6 {
+    font-size: 0.6rem !important;
+  }
+
+  .hero-badge-strip {
+    font-size: 0.68rem !important;
+    padding: 0.35rem 0.65rem !important;
+  }
+
+  /* Full-width for buttons explicitly requested */
+  .btn-mobile-full {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Badge wrapping safeguards */
+  .badge-atelier {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.625rem;
+  }
+
+  /* Hero CTAs on iPhone */
+  .hero-cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem !important;
+    width: 100%;
+  }
+
+  .hero-cta-group > a,
+  .hero-cta-group > button {
+    flex: 1 1 calc(50% - 0.25rem);
+    min-width: 130px;
+    padding: 0.55rem 0.75rem !important;
+    font-size: 0.75rem !important;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Card action buttons stack on ultra-narrow screens */
+  .card-actions-row > * {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  /* Ticker Marquee on iPhone 16 Pro */
   .ticker-marquee-wrapper::before,
   .ticker-marquee-wrapper::after {
-    width: 24px !important;
+    width: 20px !important;
   }
 
   .ticker-item {
-    padding: 0.65rem 0.8rem !important;
-    font-size: 0.74rem !important;
-    gap: 0.45rem !important;
+    padding: 0.55rem 0.7rem !important;
+    font-size: 0.72rem !important;
+    gap: 0.4rem !important;
   }
 
   .ticker-metric-badge {
-    font-size: 0.72rem !important;
-    padding: 0.08rem 0.35rem !important;
+    font-size: 0.68rem !important;
+    padding: 0.05rem 0.3rem !important;
   }
 
-  /* Certificate and Modal tweaks */
+  /* Modal Dialog for Certificate Preview */
   .modal-dialog-custom {
-    padding: 0.75rem !important;
+    padding: 1rem !important;
+    max-height: 94vh !important;
+  }
+
+  .modal-header-custom {
+    gap: 0.5rem !important;
+  }
+
+  .modal-header-custom h3 {
+    font-size: 1.1rem !important;
+  }
+
+  /* Table responsive padding */
+  .table-responsive table {
+    font-size: 0.75rem !important;
+  }
+
+  .table-responsive th,
+  .table-responsive td {
+    padding: 0.65rem 0.5rem !important;
+    white-space: nowrap;
   }
 }
 
-/* Smooth Touch Scrolling on all Tables */
+/* ==========================================================================
+   Smooth Touch Scrolling on Tables
+   ========================================================================== */
 .table-responsive {
   -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  max-width: 100%;
 }
 
-/* Large Screens (>= 1440px - 2560px) */
+/* ==========================================================================
+   Large Desktop Screens (>= 1440px - 2560px)
+   ========================================================================== */
 @media (min-width: 1920px) {
   .atelier-container {
     max-width: 1680px;
@@ -206,4 +356,3 @@ html, body {
     font-size: 18px;
   }
 }
-

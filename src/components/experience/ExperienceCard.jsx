@@ -25,15 +25,15 @@ export default function ExperienceCard({ exp }) {
   };
 
   return (
-    <article className="p-4 p-md-5 bg-white border-atelier shadow-sm d-flex flex-column gap-4 tilt-card">
+    <article className="p-3 p-sm-4 p-md-5 bg-white border-atelier shadow-sm d-flex flex-column gap-3 gap-sm-4 tilt-card">
       {/* Position Header Row */}
       <div
         className="d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-between p-3 border-atelier gap-3 timeline-entry-header"
         style={{ backgroundColor: 'var(--surface-container-low)' }}
       >
-        <div className="d-flex flex-wrap align-items-center gap-3">
+        <div className="d-flex flex-wrap align-items-center gap-2 gap-sm-3">
           <span
-            className="label-mono-md font-bold px-2 py-1"
+            className="label-mono-md font-bold px-2 py-1 shrink-0"
             style={{
               backgroundColor: exp.active ? 'var(--primary)' : 'var(--secondary)',
               color: '#ffffff',
@@ -42,10 +42,10 @@ export default function ExperienceCard({ exp }) {
             {exp.id}
           </span>
           <div>
-            <h3 className="headline-md text-dark font-bold m-0">
+            <h3 className="headline-md text-dark font-bold m-0" style={{ wordBreak: 'break-word' }}>
               {exp.company}
             </h3>
-            <span className="font-body text-muted" style={{ fontSize: '0.875rem' }}>
+            <span className="font-body text-muted d-block" style={{ fontSize: '0.85rem' }}>
               {exp.role} • {exp.location}
             </span>
           </div>
@@ -53,14 +53,14 @@ export default function ExperienceCard({ exp }) {
 
         <div className="d-flex align-items-center gap-2">
           <span
-            className="label-mono-md text-dark font-semibold px-3 py-1 border-atelier"
-            style={{ backgroundColor: 'var(--surface-container-high)' }}
+            className="label-mono-sm text-dark font-semibold px-2 px-sm-3 py-1 border-atelier"
+            style={{ backgroundColor: 'var(--surface-container-high)', whiteSpace: 'nowrap' }}
           >
             {exp.period}
           </span>
           {exp.active && (
             <span
-              className="d-inline-block pulse-glow-cyan"
+              className="d-inline-block pulse-glow-cyan shrink-0"
               style={{
                 width: '10px',
                 height: '10px',

@@ -112,17 +112,15 @@ export default function EliteMindShowcase() {
           {milestones.map((m, idx) => (
             <div
               key={m.label}
-              className={`col-6 col-md-3 p-4 d-flex flex-column justify-content-center ${
-                idx < 3 ? 'border-end-md' : ''
-              }`}
+              className="col-6 col-md-3 p-3 p-sm-4 d-flex flex-column justify-content-center"
               style={{
-                borderRight: idx < 3 ? '1px solid var(--border-subtle)' : 'none',
+                borderRight: (idx % 2 === 0 || idx < 3) ? '1px solid var(--border-subtle)' : 'none',
                 borderBottom: idx < 2 ? '1px solid var(--border-subtle)' : 'none',
               }}
             >
               <span
                 className="font-display fw-bold text-dark leading-none"
-                style={{ fontSize: '2.5rem', letterSpacing: '-0.03em' }}
+                style={{ fontSize: 'clamp(1.75rem, 5vw, 2.5rem)', letterSpacing: '-0.03em' }}
               >
                 {m.value}
               </span>
@@ -132,7 +130,7 @@ export default function EliteMindShowcase() {
               >
                 {m.label}
               </span>
-              <span className="font-body text-muted mt-0.5" style={{ fontSize: '0.78rem' }}>
+              <span className="font-body text-muted mt-0.5" style={{ fontSize: '0.78rem', wordBreak: 'break-word' }}>
                 {m.sub}
               </span>
             </div>
