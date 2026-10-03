@@ -9,7 +9,7 @@ export default function ProjectCard({ project, index }) {
       className="p-3 p-sm-4 p-md-5 bg-white border-atelier shadow-sm d-flex flex-column gap-4 tilt-card"
     >
       <div
-        className={`row g-4 align-items-stretch ${
+        className={`row g-4 align-items-center ${
           isEven ? 'flex-lg-row-reverse' : ''
         }`}
       >
@@ -75,10 +75,15 @@ export default function ProjectCard({ project, index }) {
         {/* Project Visual Image Viewport (6 cols on lg) */}
         <div className="col-12 col-lg-6">
           <div
-            className="w-100 h-100 overflow-hidden position-relative border-atelier d-flex align-items-center justify-content-center"
+            className="w-100 position-relative border-atelier overflow-hidden project-image-frame"
             style={{
-              minHeight: '300px',
-              backgroundColor: 'var(--surface-container-low)',
+              aspectRatio: '16 / 9.5',
+              backgroundColor: '#0a0d14',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)',
+              borderRadius: '2px',
             }}
           >
             {project.liveUrl ? (
@@ -86,18 +91,18 @@ export default function ProjectCard({ project, index }) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-100 h-100 d-block text-decoration-none"
+                className="w-100 h-100 d-flex align-items-center justify-content-center text-decoration-none"
                 title={`Open ${project.title} live system`}
               >
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-100 h-100"
+                  className="w-100 h-100 project-card-img"
                   style={{
-                    objectFit: 'cover',
-                    objectPosition: 'top',
-                    minHeight: '300px',
+                    objectFit: 'contain',
+                    objectPosition: 'center',
                     transition: 'transform 0.4s ease',
+                    display: 'block',
                   }}
                   loading="lazy"
                 />
@@ -106,12 +111,12 @@ export default function ProjectCard({ project, index }) {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-100 h-100"
+                className="w-100 h-100 project-card-img"
                 style={{
-                  objectFit: 'cover',
-                  objectPosition: 'top',
-                  minHeight: '300px',
+                  objectFit: 'contain',
+                  objectPosition: 'center',
                   transition: 'transform 0.4s ease',
+                  display: 'block',
                 }}
                 loading="lazy"
               />

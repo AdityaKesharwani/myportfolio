@@ -51,25 +51,32 @@ export default function FeaturedProjects() {
 
                   {/* Visual Image Viewport */}
                   <div
-                    className="w-100 overflow-hidden position-relative border-atelier project-img-frame"
-                    style={{ height: '220px', backgroundColor: 'var(--surface-container-high)' }}
+                    className="w-100 overflow-hidden position-relative border-atelier project-image-frame"
+                    style={{
+                      aspectRatio: '16 / 9.5',
+                      backgroundColor: '#0a0d14',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
                   >
                     {proj.liveUrl ? (
                       <a
                         href={proj.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-100 h-100 d-block text-decoration-none"
+                        className="w-100 h-100 d-flex align-items-center justify-content-center text-decoration-none"
                         title={`Open ${proj.title} live system`}
                       >
                         <img
                           src={proj.image}
                           alt={proj.title}
-                          className="w-100 h-100"
+                          className="w-100 h-100 project-card-img"
                           style={{
-                            objectFit: 'cover',
-                            objectPosition: 'top',
+                            objectFit: 'contain',
+                            objectPosition: 'center',
                             transition: 'transform 0.4s ease',
+                            display: 'block',
                           }}
                           loading="lazy"
                         />
@@ -78,11 +85,12 @@ export default function FeaturedProjects() {
                       <img
                         src={proj.image}
                         alt={proj.title}
-                        className="w-100 h-100"
+                        className="w-100 h-100 project-card-img"
                         style={{
-                          objectFit: 'cover',
-                          objectPosition: 'top',
+                          objectFit: 'contain',
+                          objectPosition: 'center',
                           transition: 'transform 0.4s ease',
+                          display: 'block',
                         }}
                         loading="lazy"
                       />
