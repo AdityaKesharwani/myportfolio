@@ -182,11 +182,11 @@ export default function ResumeSection({ className = '' }) {
               </div>
 
               {/* Action Buttons */}
-              <div className="d-flex flex-wrap align-items-center gap-3 pt-2">
+              <div className="d-flex flex-wrap align-items-center gap-3 pt-2 resume-cta-group">
                 <a
                   href={resumeUrl}
                   download="Aditya_Kesharwani_Resume.pdf"
-                  className="btn btn-cyan px-4 py-3 d-inline-flex align-items-center gap-2 font-mono text-uppercase fw-semibold text-decoration-none shadow-sm"
+                  className="btn btn-cyan px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-mono text-uppercase fw-semibold text-decoration-none shadow-sm resume-cta-btn"
                   style={{
                     backgroundColor: 'var(--accent-cyan)',
                     color: '#000000',
@@ -204,7 +204,7 @@ export default function ResumeSection({ className = '' }) {
                   href={resumeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn px-4 py-3 d-inline-flex align-items-center gap-2 font-mono text-uppercase fw-semibold text-decoration-none"
+                  className="btn px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-mono text-uppercase fw-semibold text-decoration-none resume-cta-btn"
                   style={{
                     backgroundColor: 'rgba(255, 255, 255, 0.05)',
                     border: '1px solid rgba(255, 255, 255, 0.2)',
@@ -223,36 +223,46 @@ export default function ResumeSection({ className = '' }) {
             {/* Right Preview Card / Document Blueprint Box */}
             <div className="col-12 col-lg-5">
               <div
-                className="p-4 position-relative"
+                className="p-3 p-sm-4 position-relative resume-preview-card"
                 style={{
                   backgroundColor: '#0a0d14',
                   border: '1px solid rgba(34, 211, 238, 0.25)',
                   boxShadow: '0 10px 30px rgba(0, 0, 0, 0.6)',
+                  width: '100%',
+                  maxWidth: '100%',
+                  boxSizing: 'border-box',
                 }}
               >
                 {/* Header bar of preview card */}
-                <div className="d-flex align-items-center justify-content-between pb-3 mb-3 border-bottom border-atelier">
-                  <div className="d-flex align-items-center gap-2">
+                <div className="d-flex align-items-center justify-content-between pb-3 mb-3 border-bottom border-atelier gap-2">
+                  <div className="d-flex align-items-center gap-2 overflow-hidden" style={{ minWidth: 0, flex: '1 1 auto' }}>
                     <span
                       style={{
                         display: 'inline-block',
-                        width: '10px',
-                        height: '10px',
+                        width: '8px',
+                        height: '8px',
                         backgroundColor: '#22c55e',
                         borderRadius: '50%',
+                        flexShrink: 0,
                       }}
                     ></span>
-                    <span className="font-mono text-xs text-uppercase" style={{ color: '#94a3b8' }}>
+                    <span
+                      className="font-mono text-xs text-uppercase text-truncate"
+                      style={{ color: '#94a3b8', minWidth: 0, fontSize: '0.6875rem', letterSpacing: '0.02em' }}
+                      title="Aditya_Kesharwani_Resume.pdf"
+                    >
                       Aditya_Kesharwani_Resume.pdf
                     </span>
                   </div>
                   <span
-                    className="font-mono px-2 py-0.5 text-uppercase"
+                    className="font-mono px-2 py-0.5 text-uppercase flex-shrink-0"
                     style={{
                       fontSize: '0.625rem',
                       backgroundColor: 'rgba(34, 211, 238, 0.1)',
                       color: 'var(--accent-cyan)',
                       border: '1px solid rgba(34, 211, 238, 0.3)',
+                      whiteSpace: 'nowrap',
+                      lineHeight: '1.4',
                     }}
                   >
                     2-PAGE CV
@@ -267,27 +277,30 @@ export default function ResumeSection({ className = '' }) {
                     color: '#0f172a',
                     borderRadius: '2px',
                     boxShadow: '0 4px 15px rgba(0, 0, 0, 0.3)',
+                    width: '100%',
+                    maxWidth: '100%',
+                    boxSizing: 'border-box',
                   }}
                 >
-                  <div className="d-flex justify-content-between align-items-start border-bottom pb-2 mb-2">
-                    <div>
-                      <h4 className="m-0 fw-bold font-display" style={{ fontSize: '1.125rem', color: '#090a0f' }}>
+                  <div className="d-flex justify-content-between align-items-start border-bottom pb-2 mb-2 gap-2">
+                    <div style={{ minWidth: 0 }}>
+                      <h4 className="m-0 fw-bold font-display text-truncate" style={{ fontSize: '1.05rem', color: '#090a0f' }}>
                         {PERSONAL_INFO.name}
                       </h4>
-                      <p className="m-0 font-mono" style={{ fontSize: '0.6875rem', color: '#475569' }}>
+                      <p className="m-0 font-mono text-truncate" style={{ fontSize: '0.6875rem', color: '#475569' }}>
                         Full Stack Developer | Laravel | PHP | React.js
                       </p>
                     </div>
                     <span
-                      className="badge bg-dark font-mono text-uppercase"
-                      style={{ fontSize: '0.5625rem', padding: '3px 6px' }}
+                      className="badge bg-dark font-mono text-uppercase flex-shrink-0"
+                      style={{ fontSize: '0.5625rem', padding: '3px 6px', whiteSpace: 'nowrap' }}
                     >
                       5+ YRS EXP
                     </span>
                   </div>
 
-                  <div className="font-mono mb-2" style={{ fontSize: '0.625rem', color: '#64748b' }}>
-                    {PERSONAL_INFO.email} • {PERSONAL_INFO.phone} • {PERSONAL_INFO.location}
+                  <div className="font-mono mb-2" style={{ fontSize: '0.625rem', color: '#64748b', wordBreak: 'break-word', lineHeight: 1.4 }}>
+                    <span>{PERSONAL_INFO.email}</span> • <span>{PERSONAL_INFO.phone}</span> • <span>{PERSONAL_INFO.location}</span>
                   </div>
 
                   <div className="mb-2">
@@ -298,17 +311,17 @@ export default function ResumeSection({ className = '' }) {
                       Professional Experience Highlights
                     </span>
                     <div className="d-flex flex-column gap-1" style={{ fontSize: '0.625rem', color: '#334155' }}>
-                      <div className="d-flex justify-content-between">
-                        <span className="fw-semibold">Kragos Technologies</span>
-                        <span className="text-muted font-mono">06/2026 – Present</span>
+                      <div className="d-flex justify-content-between gap-2">
+                        <span className="fw-semibold text-truncate" style={{ minWidth: 0 }}>Kragos Technologies</span>
+                        <span className="text-muted font-mono flex-shrink-0" style={{ whiteSpace: 'nowrap' }}>06/2026 – Present</span>
                       </div>
-                      <div className="d-flex justify-content-between">
-                        <span className="fw-semibold">Valethi Technologies</span>
-                        <span className="text-muted font-mono">10/2022 – 06/2026</span>
+                      <div className="d-flex justify-content-between gap-2">
+                        <span className="fw-semibold text-truncate" style={{ minWidth: 0 }}>Valethi Technologies</span>
+                        <span className="text-muted font-mono flex-shrink-0" style={{ whiteSpace: 'nowrap' }}>10/2022 – 06/2026</span>
                       </div>
-                      <div className="d-flex justify-content-between">
-                        <span className="fw-semibold">White Force</span>
-                        <span className="text-muted font-mono">07/2021 – 10/2022</span>
+                      <div className="d-flex justify-content-between gap-2">
+                        <span className="fw-semibold text-truncate" style={{ minWidth: 0 }}>White Force</span>
+                        <span className="text-muted font-mono flex-shrink-0" style={{ whiteSpace: 'nowrap' }}>07/2021 – 10/2022</span>
                       </div>
                     </div>
                   </div>
@@ -320,25 +333,25 @@ export default function ResumeSection({ className = '' }) {
                     >
                       Education &amp; Credentials
                     </span>
-                    <div style={{ fontSize: '0.625rem', color: '#334155' }}>
+                    <div style={{ fontSize: '0.625rem', color: '#334155', wordBreak: 'break-word', lineHeight: 1.35 }}>
                       Master of Computer Applications (MCA) • Gyan Ganga College
                     </div>
                   </div>
                 </div>
 
                 {/* Footer validation stamp */}
-                <div className="d-flex align-items-center justify-content-between pt-1">
-                  <div className="d-flex align-items-center gap-1">
-                    <BsCheckCircleFill size={13} style={{ color: '#22c55e' }} />
-                    <span className="font-mono text-xs" style={{ color: '#94a3b8', fontSize: '0.6875rem' }}>
+                <div className="d-flex align-items-center justify-content-between pt-1 gap-2 flex-wrap">
+                  <div className="d-flex align-items-center gap-1" style={{ minWidth: 0 }}>
+                    <BsCheckCircleFill size={13} style={{ color: '#22c55e', flexShrink: 0 }} />
+                    <span className="font-mono text-xs text-truncate" style={{ color: '#94a3b8', fontSize: '0.6875rem' }}>
                       Latest Chronology Verified
                     </span>
                   </div>
                   <a
                     href={resumeUrl}
                     download="Aditya_Kesharwani_Resume.pdf"
-                    className="font-mono text-xs text-decoration-none fw-semibold d-inline-flex align-items-center gap-1"
-                    style={{ color: 'var(--accent-cyan)' }}
+                    className="font-mono text-xs text-decoration-none fw-semibold d-inline-flex align-items-center gap-1 flex-shrink-0"
+                    style={{ color: 'var(--accent-cyan)', whiteSpace: 'nowrap' }}
                   >
                     <span>Instant Save</span>
                     <BsDownload size={12} />

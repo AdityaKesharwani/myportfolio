@@ -238,7 +238,7 @@ export default function HireMe() {
               <div className="d-flex flex-wrap align-items-center gap-2 gap-sm-3 pt-2 hero-cta-group">
                 <a
                   href="#services"
-                  className="btn-atelier btn-primary-atelier text-decoration-none font-mono text-uppercase px-3 px-sm-4 py-2 d-inline-flex align-items-center justify-content-center gap-2 fw-semibold"
+                  className="btn-atelier btn-primary-atelier text-decoration-none font-mono text-uppercase px-3 px-sm-4 py-2 d-inline-flex align-items-center justify-content-center gap-2 fw-semibold hero-cta-btn"
                   style={{
                     backgroundColor: '#ffffff',
                     color: '#000000',
@@ -253,15 +253,17 @@ export default function HireMe() {
 
                 <a
                   href={`mailto:${PERSONAL_INFO.email}`}
-                  className="text-decoration-none font-mono text-xs d-inline-flex align-items-center gap-2 px-3 py-2 border transition-all"
+                  className="text-decoration-none font-mono text-xs d-inline-flex align-items-center justify-content-center gap-2 px-3 py-2 border transition-all hero-cta-btn overflow-hidden"
                   style={{
                     backgroundColor: 'rgba(255, 255, 255, 0.05)',
                     borderColor: 'rgba(255, 255, 255, 0.2)',
                     color: '#ffffff',
+                    maxWidth: '100%',
                   }}
+                  title={PERSONAL_INFO.email}
                 >
                   <BsEnvelope size={14} style={{ color: 'var(--accent-cyan)', flexShrink: 0 }} />
-                  <span>Email: {PERSONAL_INFO.email}</span>
+                  <span className="text-truncate" style={{ minWidth: 0 }}>Email: {PERSONAL_INFO.email}</span>
                 </a>
               </div>
             </div>
