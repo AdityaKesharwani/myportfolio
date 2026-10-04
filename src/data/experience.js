@@ -1,11 +1,20 @@
+import kragosLogo from '../assets/images/companies/kragos-logo.png';
+import valethiLogo from '../assets/images/companies/valethi-logo.png';
+import whiteForceLogo from '../assets/images/companies/whiteforcelogo.webp';
+import sevenEyeLogo from '../assets/images/companies/7eye_technologies_logo.jpg';
+
 export const EXPERIENCES = [
   {
     id: 'POS_01',
     company: 'Kragos Technologies',
     role: 'Software Developer',
     location: 'Pune, Maharashtra',
+    logo: kragosLogo,
     period: '06/2026 – Present',
+    startDate: '06/2026',
+    endDate: null,
     active: true,
+    isInternship: false,
     scope: 'Developing and maintaining ERP and CRM systems using PHP, Laravel, React.js, and TypeScript for international clients. Handling full enterprise development cycles with modern microservices and AWS cloud infrastructure.',
     tags: ['Laravel', 'PHP', 'React.js', 'TypeScript', 'AWS EC2/S3', 'CI/CD DevOps', 'AI Workflows'],
     deliverables: [
@@ -36,8 +45,12 @@ export const EXPERIENCES = [
     company: 'Valethi Technologies',
     role: 'Software Developer',
     location: 'Nagpur, Maharashtra',
+    logo: valethiLogo,
     period: '10/2022 – 06/2026',
+    startDate: '10/2022',
+    endDate: '06/2026',
     active: false,
+    isInternship: false,
     scope: 'Developed scalable backend systems using PHP, Laravel, and MySQL for rigorous production environments. Maintained authentication protocols, payment infrastructures, and enterprise integrations.',
     gains: [
       { label: 'Manual Effort:', val: '-40% Reduction' },
@@ -56,8 +69,12 @@ export const EXPERIENCES = [
     company: 'White Force',
     role: 'Laravel Developer',
     location: 'Jabalpur, Madhya Pradesh',
+    logo: whiteForceLogo,
     period: '07/2021 – 10/2022',
+    startDate: '07/2021',
+    endDate: '10/2022',
     active: false,
+    isInternship: false,
     scope: 'Worked on Laravel-based HR and recruitment solutions with a focus on automation and workflow optimization. Connected recruitment platforms directly with 16+ external candidate sources.',
     contributions: [
       {
@@ -79,8 +96,12 @@ export const EXPERIENCES = [
     company: 'Seven Eye IT Solutions',
     role: 'PHP Developer Intern',
     location: 'Jabalpur, Madhya Pradesh',
+    logo: sevenEyeLogo,
     period: '01/2021 – 07/2021',
+    startDate: '01/2021',
+    endDate: '07/2021',
     active: false,
+    isInternship: true,
     scope: 'Completed hands-on software development and engineering training in Core PHP, Object-Oriented Programming (OOP), and full client-server interactions.',
     foundations: [
       { icon: 'terminal', text: 'Built dynamic web applications adhering strictly to OOP principles in Core PHP.' },

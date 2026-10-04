@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsArrowRight, BsBoxArrowUpRight } from 'react-icons/bs';
+import { BsBoxArrowUpRight } from 'react-icons/bs';
 
 export default function ProjectCard({ project, index }) {
   const isEven = index % 2 === 1;

@@ -6,9 +6,11 @@ import {
   BsCpu,
   BsCloudCheck,
   BsTerminal,
+  BsClockHistory,
+  BsArrowRight,
 } from 'react-icons/bs';
 
-export default function ExperienceCard({ exp }) {
+export default function ExperienceCard({ exp, isShortView = false }) {
   const getDeliverableIcon = (icon) => {
     switch (icon) {
       case 'hub':
@@ -33,7 +35,7 @@ export default function ExperienceCard({ exp }) {
       >
         <div className="d-flex flex-wrap align-items-center gap-2 gap-sm-3">
           <span
-            className="label-mono-md font-bold px-2 py-1 shrink-0"
+            className="label-mono-md font-bold px-2.5 py-1 shrink-0"
             style={{
               backgroundColor: exp.active ? 'var(--primary)' : 'var(--secondary)',
               color: '#ffffff',
@@ -41,23 +43,77 @@ export default function ExperienceCard({ exp }) {
           >
             {exp.id}
           </span>
+
+          {exp.logo && (
+            <div
+              className="bg-white border-atelier p-1 d-flex align-items-center justify-content-center shrink-0 shadow-sm"
+              style={{
+                width: '46px',
+                height: '46px',
+                borderRadius: '4px',
+              }}
+              title={exp.company}
+            >
+              <img
+                src={exp.logo}
+                alt={`${exp.company} Logo`}
+                style={{
+                  maxWidth: '100%',
+                  maxHeight: '100%',
+                  objectFit: 'contain',
+                }}
+              />
+            </div>
+          )}
+
           <div>
-            <h3 className="headline-md text-dark font-bold m-0" style={{ wordBreak: 'break-word' }}>
-              {exp.company}
-            </h3>
+            <div className="d-flex align-items-center gap-2 flex-wrap">
+              <h3 className="headline-md text-dark font-bold m-0" style={{ wordBreak: 'break-word' }}>
+                {exp.company}
+              </h3>
+              {exp._isInternship && (
+                <span
+                  className="badge-atelier font-mono"
+                  style={{
+                    backgroundColor: 'var(--surface-container-high)',
+                    color: 'var(--primary)',
+                    fontWeight: 600,
+                  }}
+                >
+                  INTERNSHIP
+                </span>
+              )}
+            </div>
             <span className="font-body text-muted d-block" style={{ fontSize: '0.85rem' }}>
               {exp.role} • {exp.location}
             </span>
           </div>
         </div>
 
-        <div className="d-flex align-items-center gap-2">
+        <div className="d-flex flex-wrap align-items-center gap-2">
+          {/* Auto-Calculated Duration Badge */}
+          {exp._durationFormatted && (
+            <span
+              className="badge-atelier font-mono d-inline-flex align-items-center gap-1.5"
+              style={{
+                backgroundColor: exp.active ? 'var(--primary)' : 'var(--surface-container-high)',
+                color: exp.active ? '#ffffff' : 'var(--on-surface)',
+                fontWeight: 600,
+              }}
+              title="Auto-calculated employment duration"
+            >
+              <BsClockHistory size={12} />
+              <span>{exp._durationFormatted} {exp.active ? '(Current)' : ''}</span>
+            </span>
+          )}
+
           <span
             className="label-mono-sm text-dark font-semibold px-2 px-sm-3 py-1 border-atelier"
             style={{ backgroundColor: 'var(--surface-container-high)', whiteSpace: 'nowrap' }}
           >
             {exp.period}
           </span>
+
           {exp.active && (
             <span
               className="d-inline-block pulse-glow-cyan shrink-0"
@@ -72,122 +128,189 @@ export default function ExperienceCard({ exp }) {
         </div>
       </div>
 
-      {/* Scope and Deliverables Grid */}
-      <div className="row g-4 timeline-entry-grid">
-        {/* Left Column: Scope & Tech Stack */}
-        <div className="col-12 col-lg-4 d-flex flex-column gap-3">
-          <span className="label-mono-sm text-dark font-bold">
-            Scope of Engagement:
-          </span>
-          <p className="font-body text-muted m-0" style={{ fontSize: '0.9375rem', lineHeight: 1.65 }}>
-            {exp.scope}
-          </p>
+      {/* SHORT / CONDENSED CONTENT VIEW ("sort content") */}
+      {isShortView ? (
+        <div className="row g-3 align-items-start pt-1">
+          <div className="col-12 col-md-5 d-flex flex-column gap-2">
+            <span className="label-mono-sm text-dark font-bold">
+              Core Mission &amp; Scope:
+            </span>
+            <p className="font-body text-muted m-0" style={{ fontSize: '0.875rem', lineHeight: 1.55 }}>
+              {exp.scope}
+            </p>
+            {exp.tags && (
+              <div className="d-flex flex-wrap gap-1 mt-2">
+                {exp.tags.slice(0, 5).map((tag) => (
+                  <span key={tag} className="badge-atelier">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
 
-          {/* Quantified Metrics Box (Valethi) */}
-          {exp.gains && (
-            <div className="p-3 border-atelier d-flex flex-column gap-2" style={{ backgroundColor: 'var(--surface-container)' }}>
-              <span className="label-mono-sm text-dark font-bold">
-                Measurable Operational Gains:
-              </span>
-              {exp.gains.map((gain, i) => (
-                <div key={i} className="d-flex justify-content-between align-items-baseline font-mono" style={{ fontSize: '0.8125rem' }}>
-                  <span className="text-muted">{gain.label}</span>
-                  <span className="text-dark font-bold">{gain.val}</span>
-                </div>
-              ))}
-            </div>
-          )}
-
-          {/* Tags */}
-          {exp.tags && (
-            <div className="d-flex flex-wrap gap-1 mt-2">
-              {exp.tags.map((tag) => (
-                <span key={tag} className="badge-atelier">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          )}
-        </div>
-
-        {/* Right Column: Deliverables */}
-        <div className="col-12 col-lg-8 d-flex flex-column gap-3">
-          <span className="label-mono-sm text-dark font-bold">
-            Key Architectural Deliverables:
-          </span>
-
-          {/* Type 1: Structured 4-Grid Deliverables (Kragos) */}
-          {exp.deliverables && (
-            <div className="row g-3">
-              {exp.deliverables.map((item, i) => (
-                <div key={i} className="col-12 col-md-6">
-                  <div className="p-3 border-atelier h-100" style={{ backgroundColor: 'var(--surface-container-low)' }}>
-                    <div className="d-flex align-items-center gap-2 text-dark mb-1">
-                      {getDeliverableIcon(item.icon)}
-                      <h4 className="headline-sm m-0" style={{ fontSize: '0.9375rem', fontWeight: 600 }}>
-                        {item.title}
-                      </h4>
+          <div className="col-12 col-md-7 d-flex flex-column gap-2 border-start-md border-atelier ps-md-4">
+            <span className="label-mono-sm text-dark font-bold">
+              Executive Highlights:
+            </span>
+            <div className="d-flex flex-column gap-2">
+              {exp.deliverables &&
+                exp.deliverables.slice(0, 3).map((item, i) => (
+                  <div key={i} className="d-flex align-items-start gap-2 font-body" style={{ fontSize: '0.8125rem' }}>
+                    <BsArrowRight size={13} className="text-primary mt-1 shrink-0" />
+                    <div>
+                      <strong className="text-dark">{item.title}:</strong>{' '}
+                      <span className="text-muted">{item.description}</span>
                     </div>
-                    <p className="font-body text-muted m-0" style={{ fontSize: '0.8125rem', lineHeight: 1.5 }}>
-                      {item.description}
-                    </p>
                   </div>
-                </div>
-              ))}
-            </div>
-          )}
+                ))}
 
-          {/* Type 2: Bullet List with Icons (Valethi) */}
-          {exp.deliverablesList && (
-            <div className="d-flex flex-column gap-2">
-              {exp.deliverablesList.map((text, i) => (
-                <div
-                  key={i}
-                  className="p-3 border-atelier d-flex align-items-start gap-2"
-                  style={{ backgroundColor: 'var(--surface-container-low)' }}
-                >
-                  <BsCheckSquare size={16} className="text-dark mt-1 shrink-0" />
-                  <p className="font-body text-muted m-0" style={{ fontSize: '0.875rem', lineHeight: 1.55 }}>
-                    {text}
-                  </p>
-                </div>
-              ))}
-            </div>
-          )}
-
-          {/* Type 3: 3 Metric Cards (White Force) */}
-          {exp.contributions && (
-            <div className="row g-3">
-              {exp.contributions.map((item, i) => (
-                <div key={i} className="col-12 col-md-4">
-                  <div className="p-3 border-atelier h-100 d-flex flex-column justify-content-between" style={{ backgroundColor: 'var(--surface-container-low)' }}>
-                    <span className="label-mono-sm text-dark font-bold">{item.tag}</span>
-                    <p className="font-body text-muted m-0 mt-2" style={{ fontSize: '0.8125rem', lineHeight: 1.5 }}>
-                      {item.desc}
-                    </p>
+              {exp.deliverablesList &&
+                exp.deliverablesList.slice(0, 3).map((text, i) => (
+                  <div key={i} className="d-flex align-items-start gap-2 font-body" style={{ fontSize: '0.8125rem' }}>
+                    <BsCheckSquare size={13} className="text-primary mt-1 shrink-0" />
+                    <span className="text-muted">{text}</span>
                   </div>
-                </div>
-              ))}
-            </div>
-          )}
+                ))}
 
-          {/* Type 4: Foundations List (Seven Eye IT) */}
-          {exp.foundations && (
-            <div className="d-flex flex-column gap-2">
-              {exp.foundations.map((item, i) => (
-                <div
-                  key={i}
-                  className="p-2 px-3 border-atelier d-flex align-items-center gap-2 font-body"
-                  style={{ backgroundColor: 'var(--surface-container-low)', fontSize: '0.875rem' }}
-                >
-                  <BsTerminal size={16} className="text-dark" />
-                  <span className="text-muted">{item.text}</span>
-                </div>
-              ))}
+              {exp.contributions &&
+                exp.contributions.map((item, i) => (
+                  <div key={i} className="d-flex align-items-start gap-2 font-body" style={{ fontSize: '0.8125rem' }}>
+                    <span className="badge-atelier font-mono shrink-0" style={{ fontSize: '0.6875rem' }}>
+                      {item.tag}
+                    </span>
+                    <span className="text-muted">{item.desc}</span>
+                  </div>
+                ))}
+
+              {exp.foundations &&
+                exp.foundations.map((item, i) => (
+                  <div key={i} className="d-flex align-items-start gap-2 font-body" style={{ fontSize: '0.8125rem' }}>
+                    <BsTerminal size={14} className="text-primary mt-1 shrink-0" />
+                    <span className="text-muted">{item.text}</span>
+                  </div>
+                ))}
             </div>
-          )}
+          </div>
         </div>
-      </div>
+      ) : (
+        /* DETAILED ARCHITECTURAL DELIVERABLES VIEW */
+        <div className="row g-4 timeline-entry-grid">
+          {/* Left Column: Scope & Tech Stack */}
+          <div className="col-12 col-lg-4 d-flex flex-column gap-3">
+            <span className="label-mono-sm text-dark font-bold">
+              Scope of Engagement:
+            </span>
+            <p className="font-body text-muted m-0" style={{ fontSize: '0.9375rem', lineHeight: 1.65 }}>
+              {exp.scope}
+            </p>
+
+            {/* Quantified Metrics Box (Valethi) */}
+            {exp.gains && (
+              <div className="p-3 border-atelier d-flex flex-column gap-2" style={{ backgroundColor: 'var(--surface-container)' }}>
+                <span className="label-mono-sm text-dark font-bold">
+                  Measurable Operational Gains:
+                </span>
+                {exp.gains.map((gain, i) => (
+                  <div key={i} className="d-flex justify-content-between align-items-baseline font-mono" style={{ fontSize: '0.8125rem' }}>
+                    <span className="text-muted">{gain.label}</span>
+                    <span className="text-dark font-bold">{gain.val}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Tags */}
+            {exp.tags && (
+              <div className="d-flex flex-wrap gap-1 mt-2">
+                {exp.tags.map((tag) => (
+                  <span key={tag} className="badge-atelier">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Right Column: Deliverables */}
+          <div className="col-12 col-lg-8 d-flex flex-column gap-3">
+            <span className="label-mono-sm text-dark font-bold">
+              Key Architectural Deliverables:
+            </span>
+
+            {/* Type 1: Structured 4-Grid Deliverables (Kragos) */}
+            {exp.deliverables && (
+              <div className="row g-3">
+                {exp.deliverables.map((item, i) => (
+                  <div key={i} className="col-12 col-md-6">
+                    <div className="p-3 border-atelier h-100" style={{ backgroundColor: 'var(--surface-container-low)' }}>
+                      <div className="d-flex align-items-center gap-2 text-dark mb-1">
+                        {getDeliverableIcon(item.icon)}
+                        <h4 className="headline-sm m-0" style={{ fontSize: '0.9375rem', fontWeight: 600 }}>
+                          {item.title}
+                        </h4>
+                      </div>
+                      <p className="font-body text-muted m-0" style={{ fontSize: '0.8125rem', lineHeight: 1.5 }}>
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Type 2: Bullet List with Icons (Valethi) */}
+            {exp.deliverablesList && (
+              <div className="d-flex flex-column gap-2">
+                {exp.deliverablesList.map((text, i) => (
+                  <div
+                    key={i}
+                    className="p-3 border-atelier d-flex align-items-start gap-2"
+                    style={{ backgroundColor: 'var(--surface-container-low)' }}
+                  >
+                    <BsCheckSquare size={16} className="text-dark mt-1 shrink-0" />
+                    <p className="font-body text-muted m-0" style={{ fontSize: '0.875rem', lineHeight: 1.55 }}>
+                      {text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Type 3: 3 Metric Cards (White Force) */}
+            {exp.contributions && (
+              <div className="row g-3">
+                {exp.contributions.map((item, i) => (
+                  <div key={i} className="col-12 col-md-4">
+                    <div className="p-3 border-atelier h-100 d-flex flex-column justify-content-between" style={{ backgroundColor: 'var(--surface-container-low)' }}>
+                      <span className="label-mono-sm text-dark font-bold">{item.tag}</span>
+                      <p className="font-body text-muted m-0 mt-2" style={{ fontSize: '0.8125rem', lineHeight: 1.5 }}>
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Type 4: Foundations List (Seven Eye IT) */}
+            {exp.foundations && (
+              <div className="d-flex flex-column gap-2">
+                {exp.foundations.map((item, i) => (
+                  <div
+                    key={i}
+                    className="p-2 px-3 border-atelier d-flex align-items-center gap-2 font-body"
+                    style={{ backgroundColor: 'var(--surface-container-low)', fontSize: '0.875rem' }}
+                  >
+                    <BsTerminal size={16} className="text-dark" />
+                    <span className="text-muted">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </article>
   );
 }

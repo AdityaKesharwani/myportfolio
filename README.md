@@ -12,7 +12,7 @@
 ## 🚀 Key Features & Highlights
 
 - **⚡ Full-Width Continuous Ticker Marquee**: Smooth, GPU-accelerated infinite slider highlighting core technologies, specialized capabilities, and production engineering metrics (`5+ Yrs Exp`, `16+ Portal APIs`, `30% Defect Reduction`, `99.9% Uptime`).
-- **🌟 EliteMind Solutions Freelance Studio**: Dedicated showcase of freelance engineering firm founded in 2022 by Aditya Kesharwani, featuring 40+ delivered systems, 100% IP assignment, and direct founder collaboration.
+- **🌟 EliteMind Solutions Freelance Studio**: Dedicated showcase of freelance engineering firm founded in 2021 by Aditya Kesharwani, featuring 40+ delivered systems, 100% IP assignment, and direct founder collaboration.
 - **🪄 3D Interactive Client Testimonials Carousel**: Authentic client reviews with touch-swipe gestures and realistic portraits, prominently featuring **The Restfo Resort in Pench**, **TalentSync USA**, **Apex Media UK**, and **PaySwift India**.
 - **🔗 Live Project Showcases**: Direct links to production platforms including [Happiest Resume](https://happiestresume.com/), [ADM Brief](https://brief.admgroup.com/), [White Force HRMS](https://www.white-force.com/), and [The Oban Whiskey](https://www.malts.com/en/oban).
 - **📜 Verified Certifications Dossier**: Interactive credential center with one-click downloads and official verification links for Google Analytics, Scaler Academy, HackerRank SQL, and Corporate Experience certificates.
@@ -90,11 +90,11 @@ This repository includes a pre-configured workflow at `.github/workflows/deploy.
 
 **Aditya Kesharwani**  
 - **Role**: Full Stack Developer & Digital Architect  
-- **Founder**: EliteMind Solutions (Est. 2022)  
+- **Founder**: EliteMind Solutions (Est. 2021)  
 - **Email**: [adityakesharwani.dev@gmail.com](mailto:adityakesharwani.dev@gmail.com) / [akesharwani.info@gmail.com](mailto:akesharwani.info@gmail.com)  
 - **LinkedIn**: [linkedin.com/in/aditya-kesharwani-1329531a0](https://www.linkedin.com/in/aditya-kesharwani-1329531a0)  
 - **GitHub**: [github.com/AdityaKesharwani](https://github.com/AdityaKesharwani)  
-- **Website**: [adityakesharwani.wuaze.com](https://adityakesharwani.wuaze.com)  
+- **Website**: [adityakesharwani.com](https://adityakesharwani.com)  
 
 ---
 

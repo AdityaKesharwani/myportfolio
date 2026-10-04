@@ -36,8 +36,8 @@ export default function EliteMindShowcase() {
   ];
 
   const milestones = [
-    { value: '2022', label: 'FOUNDED', sub: 'Dedicated Freelance Practice' },
-    { value: '40+', label: 'DELIVERED', sub: 'Production Web Systems' },
+    { value: '2021', label: 'FOUNDED', sub: 'Dedicated Freelance Practice' },
+    { value: '20+', label: 'DELIVERED', sub: 'Production Web Systems' },
     { value: '100%', label: 'ON-TIME', sub: 'Milestone Execution Rate' },
     { value: '99.8%', label: 'RETENTION', sub: 'Client Satisfaction Index' },
   ];
@@ -85,7 +85,7 @@ export default function EliteMindShowcase() {
               }}
             >
               <BsBriefcaseFill size={11} />
-              FREELANCE ENGINEERING STUDIO // EST. 2022
+              FREELANCE ENGINEERING STUDIO // EST. 2021
             </span>
           </div>
 
@@ -95,11 +95,11 @@ export default function EliteMindShowcase() {
                 EliteMind Solutions
               </h2>
               <p className="font-mono text-muted text-xs mt-1 m-0">
-                FOUNDER &amp; LEAD FULL STACK ARCHITECT: ADITYA KESHARWANI • ACTIVE SINCE 2022
+                FOUNDER &amp; LEAD FULL STACK ARCHITECT: ADITYA KESHARWANI • ACTIVE SINCE 2021
               </p>
             </div>
             <p className="font-body text-muted m-0" style={{ maxWidth: '540px', fontSize: '0.9375rem', lineHeight: 1.6 }}>
-              <strong>EliteMind Solutions</strong> is my dedicated freelance engineering collective established in 2022 exclusively for independent contracting, bespoke web applications, enterprise API development, and high-performance cloud architectures.
+              <strong>EliteMind Solutions</strong> is my dedicated freelance engineering collective established in 2021 exclusively for independent contracting, bespoke web applications, enterprise API development, and high-performance cloud architectures.
             </p>
           </div>
         </div>

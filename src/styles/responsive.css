@@ -200,27 +200,7 @@ p, span, a, label, li, dt, dd, th, td {
     margin: 0 0.4rem !important;
   }
 
-  /* 3D Testimonials Stage on Mobile */
-  .testimonials-3d-stage {
-    min-height: auto !important;
-    display: block !important;
-    perspective: none !important;
-  }
 
-  .testimonial-3d-card.card-prev,
-  .testimonial-3d-card.card-next,
-  .testimonial-3d-card.card-hidden {
-    display: none !important;
-  }
-
-  .testimonial-3d-card.card-active {
-    position: relative !important;
-    transform: none !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    filter: none !important;
-    opacity: 1 !important;
-  }
 }
 
 /* ==========================================================================

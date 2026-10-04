@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Container from '../components/common/Container';
 import ExperienceTimeline from '../components/experience/ExperienceTimeline';
 import ExperienceStats from '../components/experience/ExperienceStats';
 import Button from '../components/common/Button';
 import { PERSONAL_INFO } from '../utils/constants';
+import { EXPERIENCES } from '../data/experience';
+import { calculateExperienceSummary } from '../utils/experienceCalculator';
 import { BsArrowRight } from 'react-icons/bs';
 
 export default function Experience() {
+  const summary = useMemo(() => calculateExperienceSummary(EXPERIENCES), []);
+
   return (
     <>
       <Helmet>
-        <title>Experience | {PERSONAL_INFO.name} - Full Stack Developer</title>
+        <title>Experience ({summary.formattedTotal}) | {PERSONAL_INFO.name} - Full Stack Developer</title>
         <meta
           name="description"
-          content="Professional engineering timeline and work history of Aditya Kesharwani - 5+ years of enterprise software, ERP, CRM, and cloud engineering."
+          content={`Professional engineering timeline and work history of Aditya Kesharwani - ${summary.formattedTotal} (${summary.formattedTotalShort}) of enterprise software, ERP, CRM, and cloud engineering.`}
         />
       </Helmet>
 
