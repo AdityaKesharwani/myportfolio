@@ -13,7 +13,15 @@ export default function Contact() {
         <title>Contact Studio | {PERSONAL_INFO.name} - Full Stack Developer</title>
         <meta
           name="description"
-          content="Initiate contact with Aditya Kesharwani for project development, full-stack architecture, or consulting engagements. Response within 24 hours guaranteed."
+          content="Contact Aditya Kesharwani for full-stack development, Laravel engineering, React product delivery, and high-impact digital consulting engagements."
+        />
+        <link rel="canonical" href="https://adityakesharwani.com/contact" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={`Contact | ${PERSONAL_INFO.name}`} />
+        <meta property="og:url" content="https://adityakesharwani.com/contact" />
+        <meta
+          property="og:description"
+          content="Direct contact channel for project development, architecture consulting, and software engineering discussions."
         />
       </Helmet>
 

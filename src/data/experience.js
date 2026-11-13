@@ -7,7 +7,7 @@ export const EXPERIENCES = [
   {
     id: 'POS_01',
     company: 'Kragos Technologies',
-    role: 'Software Developer',
+    role: 'Full Stack Developer',
     location: 'Pune, Maharashtra',
     logo: kragosLogo,
     period: '06/2026 – Present',

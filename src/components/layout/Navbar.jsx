@@ -8,11 +8,9 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  const [prevPath, setPrevPath] = useState(location.pathname);
-  if (location.pathname !== prevPath) {
-    setPrevPath(location.pathname);
+  useEffect(() => {
     setMobileMenuOpen(false);
-  }
+  }, [location.pathname]);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -244,6 +242,7 @@ export default function Navbar() {
               <NavLink
                 key={link.path}
                 to={link.path}
+                onClick={() => setMobileMenuOpen(false)}
                 className="p-3 label-mono-md text-decoration-none d-flex align-items-center justify-content-between transition-all"
                 style={({ isActive }) => ({
                   backgroundColor: isActive ? '#ffffff' : 'rgba(255, 255, 255, 0.04)',
@@ -260,6 +259,7 @@ export default function Navbar() {
             <a
               href="/Aditya_Kesharwani_Resume.pdf"
               download="Aditya_Kesharwani_Resume.pdf"
+              onClick={() => setMobileMenuOpen(false)}
               className="p-3 label-mono-md text-decoration-none d-flex align-items-center justify-content-between transition-all mt-2"
               style={{
                 backgroundColor: 'rgba(34, 211, 238, 0.1)',

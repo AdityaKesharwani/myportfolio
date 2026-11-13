@@ -60,7 +60,15 @@ export default function Certificates() {
         <title>Certificates &amp; Accreditations | {PERSONAL_INFO.name} - Full Stack Developer</title>
         <meta
           name="description"
-          content={`Explore certified technical credentials, Anthropic Claude AI certifications, HackerRank SQL assessments, Google Analytics, and corporate engineering accreditations of ${PERSONAL_INFO.name}.`}
+          content={`Verified technical credentials of ${PERSONAL_INFO.name}, including Anthropic AI certifications, HackerRank assessments, Google Analytics, and developer training accreditations.`}
+        />
+        <link rel="canonical" href="https://adityakesharwani.com/certificates" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={`Certificates | ${PERSONAL_INFO.name}`} />
+        <meta property="og:url" content="https://adityakesharwani.com/certificates" />
+        <meta
+          property="og:description"
+          content="Credentials and certifications validating software engineering, AI workflows, analytics, and enterprise technical capability."
         />
       </Helmet>
 

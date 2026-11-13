@@ -13,7 +13,9 @@ export default function NotFound() {
     <>
       <Helmet>
         <title>404 Not Found | {PERSONAL_INFO.name} - Architectural Atelier</title>
-        <meta name="description" content="The requested route does not exist in the architectural registry." />
+        <meta name="description" content="The requested route does not exist in the architectural registry for Aditya Kesharwani's portfolio." />
+        <link rel="canonical" href="https://adityakesharwani.com/404" />
+        <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
       <section

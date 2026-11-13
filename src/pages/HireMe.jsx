@@ -24,7 +24,15 @@ export default function HireMe() {
         <title>Hire Me &amp; Services | {PERSONAL_INFO.name} - Full Stack Developer</title>
         <meta
           name="description"
-          content="Hire Aditya Kesharwani - Full Stack Developer & Digital Architect for Laravel, PHP, React.js, and API architecture projects. Flexible hourly rate: $12–$25/hr."
+          content="Hire Aditya Kesharwani for Laravel, PHP, React.js, ERP, and product engineering projects. Available for contract, consulting, and full-time technical roles."
+        />
+        <link rel="canonical" href="https://adityakesharwani.com/hire-me" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={`Hire Me | ${PERSONAL_INFO.name}`} />
+        <meta property="og:url" content="https://adityakesharwani.com/hire-me" />
+        <meta
+          property="og:description"
+          content="Custom software engineering, application architecture, API delivery, and digital transformation support for ambitious product teams."
         />
       </Helmet>
 

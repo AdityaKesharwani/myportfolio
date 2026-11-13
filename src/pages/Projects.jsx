@@ -34,7 +34,15 @@ export default function Projects() {
         <title>Projects &amp; Technical Index | 5.5+ Years Journey | {PERSONAL_INFO.name}</title>
         <meta
           name="description"
-          content={`Systematic inventory of ${PROJECTS.length}+ production architectures, enterprise ERPs, e-commerce platforms, and full-stack software deployments delivered across 5.5+ years journey by ${PERSONAL_INFO.name}.`}
+          content={`Portfolio of ${PROJECTS.length}+ production systems, enterprise ERPs, e-commerce platforms, and full-stack web applications built by ${PERSONAL_INFO.name} across a 5.5+ year engineering journey.`}
+        />
+        <link rel="canonical" href="https://adityakesharwani.com/projects" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={`Projects | ${PERSONAL_INFO.name}`} />
+        <meta property="og:url" content="https://adityakesharwani.com/projects" />
+        <meta
+          property="og:description"
+          content="Selected portfolio of production-grade Laravel, React, ERP, e-commerce, and cloud-native software projects built for business impact."
         />
       </Helmet>
 

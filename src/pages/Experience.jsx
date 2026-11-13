@@ -18,7 +18,15 @@ export default function Experience() {
         <title>Experience ({summary.formattedTotal}) | {PERSONAL_INFO.name} - Full Stack Developer</title>
         <meta
           name="description"
-          content={`Professional engineering timeline and work history of Aditya Kesharwani - ${summary.formattedTotal} (${summary.formattedTotalShort}) of enterprise software, ERP, CRM, and cloud engineering.`}
+          content={`Professional engineering timeline of Aditya Kesharwani, spanning ${summary.formattedTotal} of enterprise software, ERP, CRM, and cloud application delivery.`}
+        />
+        <link rel="canonical" href="https://adityakesharwani.com/experience" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={`Experience | ${PERSONAL_INFO.name}`} />
+        <meta property="og:url" content="https://adityakesharwani.com/experience" />
+        <meta
+          property="og:description"
+          content="Experience timeline covering enterprise ERP, CRM, cloud deployments, and product engineering work delivered over 5+ years."
         />
       </Helmet>
 

@@ -17,7 +17,15 @@ export default function About() {
         <title>About | {PERSONAL_INFO.name} - Full Stack Developer</title>
         <meta
           name="description"
-          content="Learn about Aditya Kesharwani - Full Stack Developer with 5+ years of experience in Laravel, PHP, React.js, and cloud application engineering."
+          content="Learn about Aditya Kesharwani, a Full Stack Developer with 5+ years of experience in Laravel, PHP, React.js, ERP systems, and cloud-native engineering."
+        />
+        <link rel="canonical" href="https://adityakesharwani.com/about" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={`About | ${PERSONAL_INFO.name}`} />
+        <meta property="og:url" content="https://adityakesharwani.com/about" />
+        <meta
+          property="og:description"
+          content="Technical background, software engineering approach, and professional journey of Aditya Kesharwani."
         />
       </Helmet>
 
